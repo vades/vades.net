@@ -1,0 +1,70 @@
+/* Notify
+-------------------------------------------------- */
+$notify-color: $gray-90;
+$notify-bcg-color: $gray-10;
+$notify-color-inverse: $gray-10;
+$notify-bcg-color-inverse: $gray-90;
+
+.notify {
+  @include displayFlex();
+  @include justifyContent(space-between);
+  @include alignItems(center);
+  color: $notify-color;
+  padding: $spacing $spacing-double;
+  background-color: $notify-bcg-color;
+  border: solid $gray-20 1px;
+  font-weight: bold;
+
+  .close {
+    font-size: 120%;
+    cursor: pointer;
+    color: $gray-60;
+  }
+
+  &.is-info {
+    border-color: $info-color;
+  }
+
+  &.is-success {
+    border-color: $success-color;
+  }
+
+  &.is-warning {
+    border-color: $warning-color;
+  }
+
+  &.is-danger {
+    border-color: $danger-color;
+  }
+
+  /* Inverse
+  -------------------------------------------------- */
+  &.inverse {
+    color: $notify-color-inverse;
+    background-color: $notify-bcg-color-inverse;
+    border: 0;
+    .close {
+     color: $notify-color-inverse;
+    }
+
+    &.is-info {
+      border-color: $info-color;
+      color: $info-color;
+    }
+  
+    &.is-success {
+      border-color: $success-color;
+      color: $success-color;
+    }
+  
+    &.is-warning {
+      border-color: $warning-color;
+      color: $warning-color;
+    }
+  
+    &.is-danger {
+      border-color: $danger-color;
+      color: $danger-color;
+    }
+  }
+}

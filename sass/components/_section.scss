@@ -1,0 +1,9 @@
+/* Section
+-------------------------------------------------- */
+.section{
+  margin-bottom: $spacing;
+  @include mqMin($break-s) {
+    margin-bottom: $spacing-double;
+
+  }
+}

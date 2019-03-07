@@ -1,0 +1,60 @@
+/* Header
+-------------------------------------------------- */
+
+#header {
+  z-index: $zindex-header;
+  height: $header-h;
+  background-color: #fff;
+  padding: $spacing;
+
+  @include mqMin($break-l) {
+    height: $header-h-l;
+    padding: $spacing $spacing-double;
+  }
+
+  >section {
+    @include displayFlex();
+    @include justifyContent(space-between);
+    @include alignItems(center);
+    //flex: 1 0 auto;
+    height: 100%;
+   /*  >*{
+      flex: 1 0 auto;
+    } */
+
+  }
+
+}
+
+#headerBrand {
+  @include displayFlex();
+  @include justifyContent(space-between);
+  @include alignItems(center);
+}
+#headerLogo{}
+
+#headerPrimary {
+  width: 90%;
+  @include mqMin($break-m) {
+    width: 70%;
+  }
+}
+
+/* Sticky header
+-------------------------------------------------- */
+.sticky-header {
+  #header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #page {
+    padding-top: $header-h;
+
+    @include mqMin($break-l) {
+      padding-top: $header-h-l;
+    }
+  }
+}

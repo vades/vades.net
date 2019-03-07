@@ -1,0 +1,72 @@
+/* Confirm
+-------------------------------------------------- */
+// https://medium.com/@andrejsabrickis/a-fullscreen-modal-with-fixed-header-footer-and-a-scrollable-content-1656845c8171
+.vds-confirm {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-modal;
+  overflow: auto;
+
+  .container {
+    @include boxShadow(1px 1px 5px 0px rgba(50, 50, 50, 0.29));
+    background-color: $bcg-color;
+    margin: $spacing-quad;
+    width: 50%;
+    max-width: 60rem;
+    margin: 10rem auto 0;
+
+    >* {
+      padding: $spacing $spacing-double;
+    }
+  }
+
+  header {
+    border-bottom: solid 1px $border-color;
+    font-weight: bold;
+    @include displayFlex();
+    @include justifyContent(space-between);
+    @include alignItems(center);
+    width: 100%;
+
+    .close {
+      font-size: 130%;
+      cursor: pointer;
+      color: $gray-40;
+      font-weight: bold;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  article {
+    font-size: 110%;
+  }
+
+  footer {
+    border-top: solid 1px $border-color;
+    text-align: right;
+
+    &:empty {
+      display: none;
+    }
+
+    button {
+      @include button();
+     
+      &:first-child{
+        @include buttonTransparent();
+      }
+     
+      &:last-child:not(:first-child){
+        @include buttonColored( $info-color);
+      }
+      //@include buttonTransparent();
+    }
+  }
+
+}

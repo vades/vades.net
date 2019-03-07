@@ -1,0 +1,9 @@
+//@import "~sass/_shared.scss";
+/* Body
+-------------------------------------------------- */
+body {
+  @include displayFlex();
+  @include flexDirection(column);
+  min-height: 100vh;
+}
+

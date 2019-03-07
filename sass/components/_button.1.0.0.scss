@@ -1,0 +1,72 @@
+/* Button
+-------------------------------------------------- */
+
+.button {
+  @include button();
+
+  &.is-text {
+    padding: $spacing-half 0;
+    border: 0;
+    @include buttonTransparent();
+  }
+
+  &.is-outlined {
+    @include buttonTransparent();
+  }
+
+
+  &.is-disabled {
+    @include buttonDisabled();
+  }
+  
+
+  &.is-info {
+    @include buttonColored( $info-color);
+  }
+
+  &.is-success {
+    @include buttonColored($success-color);
+    
+  }
+
+  &.is-warning {
+    @include buttonColored($warning-color);
+    
+  }
+
+  &.is-danger {
+    @include buttonColored($danger-color);
+  }
+
+  &.size-xs {
+    font-size: 80%;
+    padding: $spacing-half $spacing;
+  }
+
+  &.size-s {
+    font-size: 90%;
+    padding: $spacing-half $spacing;
+  }
+
+  &.size-m {
+    font-size: 140%;
+    padding: $spacing $spacing-and-half;
+  }
+
+  &.size-l {
+    font-size: 160%;
+    padding: $spacing-and-half $spacing-double;
+  }
+
+  &.size-xl {
+    font-size: 200%;
+    padding: $spacing-double $spacing-triple;
+  }
+
+  i:first-child{
+    margin: 0 $spacing;
+  }
+  i:last-child{
+    margin: 0 $spacing;
+  }
+}

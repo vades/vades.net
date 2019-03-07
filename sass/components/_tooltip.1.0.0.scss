@@ -1,0 +1,147 @@
+/* Settings
+-------------------------------------------------- */
+$tooltip-w: 24rem;
+$tooltip-color: $gray-90;
+$tooltip-bcg-color: $gray-10;
+$tooltip-color-inverse: $gray-10;
+$tooltip-bcg-color-inverse: $gray-80;
+
+/* Tooltip wrap
+-------------------------------------------------- */
+.vds-tooltip-wrap {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+
+  &.on-hover {
+    &:hover {
+      .vds-tooltip {
+        display: block;
+      }
+    }
+  }
+
+  &.on-click {
+      .vds-tooltip {
+        &[aria-hidden="false"] {
+          display: block;
+        }
+       
+      }
+  }
+}
+
+/* Tooltip
+-------------------------------------------------- */
+.vds-tooltip {
+  white-space: normal;
+  display: none;
+  position: absolute;
+  width: $tooltip-w;
+  padding: $spacing;
+  background-color: $tooltip-bcg-color;
+  color: $tooltip-color;
+  z-index: $zindex-tooltip;
+  text-align: left;
+  line-height: $font-height;
+  @include boxShadow($box-shadow);
+
+  /* Arrow */
+  &::after {
+    content: " ";
+    position: absolute;
+    border-width: $spacing/2;
+    border-style: solid;
+  }
+
+  /* Right tooltip */
+  &.right {
+    top: -$spacing/2;
+    left: 105%;
+
+    /* Arrow To the left of the tooltip */
+    &::after {
+      //top: 50%;
+      top: $spacing*2;
+      right: 100%;
+      margin-top: -$spacing/2;
+      border-color: transparent darken($tooltip-bcg-color, 20%) transparent transparent;
+    }
+  }
+
+  /* Left tooltip */
+  &.left {
+    top: -$spacing/2;
+    margin-top: -$spacing/2;
+    right: 105%;
+
+    /* Arrow To the right of the tooltip */
+    &::after {
+      //top: 50%;
+      top: $spacing*2;
+      left: 100%;
+      border-color: transparent transparent transparent darken($tooltip-bcg-color, 20%);
+    }
+  }
+
+  /* Top tooltip */
+  &.top {
+    bottom: 100%;
+    left: 50%;
+    /* Use half of the width (120/2 = 60), to center the tooltip */
+    margin-left: -$tooltip-w/2;
+
+    /* Arrow To the bottom of the tooltip */
+    &::after {
+      top: 100%;
+      left: 50%;
+      margin-left: -$spacing/2;
+      border-color: darken($tooltip-bcg-color, 20%) transparent transparent transparent;
+    }
+  }
+
+  /* Bottom tooltip */
+  &.bottom {
+    top: 100%;
+    left: 50%;
+    /* Use half of the width (120/2 = 60), to center the tooltip */
+    margin-left: -$tooltip-w/2;
+
+    /* Arrow To the top of the tooltip */
+    &::after {
+      bottom: 100%;
+      left: 50%;
+      margin-left: -$spacing/2;
+      border-color: transparent transparent darken($tooltip-bcg-color, 20%) transparent;
+    }
+  }
+
+  /* Inverse
+-------------------------------------------------- */
+  &.inverse {
+    color: $tooltip-color-inverse;
+    background-color: $tooltip-bcg-color-inverse;
+    &.right {
+      &::after {
+        border-color: transparent $tooltip-bcg-color-inverse transparent transparent;
+      }
+    }
+
+    &.left {
+      &::after {
+        border-color: transparent transparent transparent $tooltip-bcg-color-inverse;
+      }
+    }
+    &.top {
+      &::after {
+        border-color: $tooltip-bcg-color-inverse transparent transparent transparent;
+      }
+    }
+    &.bottom {
+      &::after {
+        border-color: transparent transparent $tooltip-bcg-color-inverse transparent;
+      }
+    }
+  }
+}
+

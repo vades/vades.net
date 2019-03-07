@@ -1,0 +1,14 @@
+/* Button
+-------------------------------------------------- */
+.panel{
+  border: solid 1px $border-color;
+  border-radius: $border-radius;
+  > header{
+    font-size: 110%;
+    padding: $spacing;
+    border-bottom: solid 1px $border-color;
+  }
+  .content{
+    padding: $spacing;
+  }
+}

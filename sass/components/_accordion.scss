@@ -1,0 +1,40 @@
+/* accordion
+-------------------------------------------------- */
+$accordion-focus-color: $focus-color;
+
+.accordion-toggle {
+  @include displayFlex();
+  @include alignItems(center);
+  @include justifyContent(space-between);
+  width: 100%; 
+  //font-size: 110%;
+  cursor: pointer;
+
+  &::after {
+    margin-left: $spacing;
+    font-size: 130%;
+  }
+
+  &[aria-expanded="false"] {
+    &::after {
+      content: "+";
+    }
+  }
+
+  &[aria-expanded="true"] {
+    &::after {
+      content: "-";
+    }
+  }
+
+  &:focus {
+    &::after {
+      font-weight: bold;
+      color: $focus-color;
+    }
+
+  }
+}
+.accordion{
+  margin-top: $spacing;
+}

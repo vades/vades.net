@@ -1,0 +1,10 @@
+/* Layout m (main) - without  sidebars
+-------------------------------------------------- */
+.layout-m{
+  #main{
+    padding: $spacing;
+    @include mqMin($break-l) {
+      padding: $spacing-double;
+    }
+  }
+}

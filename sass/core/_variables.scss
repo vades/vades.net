@@ -1,0 +1,82 @@
+/* Global variables
+-------------------------------------------------- */
+// Class prefix
+$prefix: tc-;
+// Base font size
+// We are defining a base font-size of 62.5% to have the convenience 
+// of sizing rems in a way that is similar to using px.
+$base-font-size: 62.5%;
+$body-font-size: 1.4rem;
+// Container max width
+$container-max-w: 1200px;
+// Extra small devices (phones, up to 480px)
+$break-xs: 480px;
+// Small devices (tablets, 768px and up)
+$break-s: 768px;
+// Medium devices (big landscape tablets, laptops, and desktops, 992px and up)
+$break-m: 992px;
+// Large devices (large desktops, 1200px and up)
+$break-l: 1200px;
+// Extra large
+$break-xl: 1824px;
+// Z-INDEX
+$zindex-modal: 4100;
+$zindex-canvas: 3100;
+$zindex-overlay: 3000;
+$zindex-nav-header: 2900;
+$zindex-tooltip: 2300;
+$zindex-dropdown: 2200;
+$zindex-header: 2100;
+$zindex-sidebar-l: 2000;
+
+// spacing
+$spacing: 1rem;
+$spacing-double: $spacing * 2;
+$spacing-triple: $spacing * 3;
+$spacing-quad: $spacing * 4;
+$spacing-half: $spacing / 2;
+$spacing-and-half: $spacing + $spacing-half;
+
+// text input types
+$input-type-text:  'input[type=text],input[type=password],input[type=color],input[type=date],input[type=datetime-local],input[type=email],input[type=month],input[type=number],input[type=range],input[type=search],input[type=tel],input[type=time],input[type=url],input[type=week],textarea';
+
+
+
+// dimensions
+$header-h: 5rem;
+$header-h-s: 5rem;//TODO: deprecated
+$header-h-l: 7rem;
+
+// grid
+$grid_cols: 12;
+$grid_gutter: $spacing; 
+
+// child cols
+$child_cols: 12; 
+$child_cols_gutter:$spacing; 
+
+// fonts
+$font-sans-serif: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+$font-serif: Georgia, "Bitstream Charter", serif;
+$font-family: $font-sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-heavy: 700;
+$font-height: 1.6;
+
+$h1-font-size: 2.2rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.8rem;
+$h4-font-size: 1.6rem;
+$h5-font-size: 1.5rem;
+$h6-font-size: 1.4rem;
+
+// input and button
+$input-padding: $spacing;
+$button-padding: $spacing $spacing-and-half;
+
+// effects
+$border-radius: 2px;
+$box-shadow-color: rgba(50, 50, 50, 0.29);
+$box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.29);
+$overlay-bcg-color: rgba(37, 37, 37, 0.5);

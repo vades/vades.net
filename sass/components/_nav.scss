@@ -1,0 +1,50 @@
+/* Navigation
+-------------------------------------------------- */
+nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .inline {
+    >* {
+      padding: 0 $spacing;
+      display: inline-block;
+    } 
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+/* Dropdown menu nav
+-------------------------------------------------- */
+.dropdown-menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+    li {
+      margin-bottom: $spacing;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    .delim {
+      border-top: solid 1px $border-color;
+    }
+  
+    [role=menuitem] {
+      white-space: nowrap;
+      text-align: left;
+      display: block;
+      min-width: 100%;
+      margin-bottom: $spacing;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+}

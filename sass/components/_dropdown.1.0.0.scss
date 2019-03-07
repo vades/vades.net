@@ -1,0 +1,76 @@
+/* Dropdown
+-------------------------------------------------- */
+:host {
+  display: inline-block;
+  width: auto;
+}
+
+.vds-dropdown {
+  position: relative;
+}
+
+header {
+  .fas {
+    padding-left: $spacing;
+  }
+
+  @import "button.1.0.0";
+
+}
+
+.body {
+  text-align: left;
+  background-color: $bcg-color;
+  @include boxShadow($box-shadow);
+  padding: $spacing;
+  z-index: $zindex-dropdown;
+
+
+  @include mqMax($break-s - 1) {
+    position: fixed;
+    width: 75%;
+    top: 0;
+    //left: 0;
+    bottom: 0;
+
+    &:not(.right) {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+  }
+
+  @include mqMin($break-s) {
+    position: absolute;
+    width: auto;
+    min-width: 30rem;
+
+    &.right {
+      right: 0;
+    }
+
+    &.has-arrow {
+      margin-top: $spacing-half;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        border-width: $spacing;
+        border-style: solid;
+        bottom: 100%;
+        left: 5%;
+        margin-left: -$spacing;
+        border-color: transparent transparent $bcg-color-inverse transparent;
+      }
+
+      &.right {
+        &::after {
+          left: 95%;
+        }
+      }
+    }
+  }
+}
+

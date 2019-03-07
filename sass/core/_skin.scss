@@ -1,0 +1,99 @@
+/* Default skin
+-------------------------------------------------- */
+// Brand
+$primary-color: #000000;
+$secondary-color: #3f98b8;
+
+// Primary tints
+$primary-color-10: #f2f2f2;
+$primary-color-20: #d9d9d9;
+$primary-color-30: #bfbfbf;
+$primary-color-40: #a6a6a6;
+$primary-color-50: #8c8c8c;
+$primary-color-60: #737373;
+$primary-color-70: #595959;
+$primary-color-80: #404040;
+$primary-color-90: #262626;
+$primary-color-100: #0d0d0d;
+
+
+// Secondary tints
+$secondary-color-10: #ecf5f8;
+$secondary-color-20: #c6e2eb;
+$secondary-color-30: #a0cede;
+$secondary-color-40: #7abad1;
+$secondary-color-50: #54a7c4;
+$secondary-color-60: #3b8dab;
+$secondary-color-70: #2e6e85;
+$secondary-color-80: #214e5f;
+$secondary-color-90: #142f39;
+$secondary-color-100: #071013;
+
+// Fonts
+$font-color: $primary-color;
+$font-color-inverse: $primary-color-10; 
+$heading-color: $primary-color-60;
+$input-color: $primary-color;
+$button-color: $primary-color;
+$disabled-color: $primary-color-50;
+$a-color: $primary-color-80;
+$a-hover-color: $primary-color-90;
+$focus-color: #5bc0de;
+$active-color: #5bc0de;
+$light-color: #737373;
+$lightest-color: #737373;
+$dark-color: #262626;
+$darkest-color:#000000;
+
+// Backgrounds
+$body-bcg-color: #ffffff;
+$bcg-color: #ffffff;
+$bcg-color-inverse: $primary-color-80;
+$input-bcg-color: $bcg-color;
+$input-bcg-disabled-color: #ccc;
+$button-bcg-color: $primary-color-30;
+$table-strip-bcg-color: $primary-color-10;
+$table-hover-bcg-color: $primary-color-20;
+
+// Borders
+$border-color: $primary-color-20;
+
+// Notifications, responses, etc.
+$success-color: #80AD80;
+$success-color-10: #d1e1d1;
+$info-color: #5bc0de;
+$info-color-10: #cadae8;
+$warning-color: #f0ad4e;
+$warning-color-10: #fdf4e7;
+$danger-color: #d9534f;
+$danger-color-10: #faebea;
+
+$success-bcg-color: lighten($success-color, 30%);
+$info-bcg-color: lighten($info-color, 30%);
+$warning-bcg-color: lighten($warning-color, 30%);
+$danger-bcg-color: lighten($danger-color, 35%);
+
+// Basic colors
+$white: #ffffff;
+$black: #000000;
+$gray: #cccccc;
+$gray-10: #f2f2f2;
+$gray-20: #d9d9d9;
+$gray-30: #bfbfbf;
+$gray-40: #a6a6a6;
+$gray-50: #8c8c8c;
+$gray-60: #737373;
+$gray-70: #595959;
+$gray-80: #404040;
+$gray-90: #262626;
+$gray-100:  #0d0d0d;
+$blue: #3273dc;
+$cyan: #209cee;
+$turquoise: #00d1b2;
+$yellow: #ffdd57;
+$green: #23d160;
+$red: 	#ff3860;
+$purple: 	#9B59B6;
+$orange-red: #ff4500;
+$orange: #ffa500;
+$pink: #ff7eb9;

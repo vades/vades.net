@@ -1,0 +1,11 @@
+/* Button grooup
+-------------------------------------------------- */
+
+.button-group {
+  > * {
+    margin-right: $spacing;
+  }
+  *:last-child{
+    margin-right: 0;
+  }
+}

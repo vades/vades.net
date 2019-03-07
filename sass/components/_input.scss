@@ -1,0 +1,119 @@
+/* Inputs
+-------------------------------------------------- */
+
+/* Label
+-------------------------------------------------- */
+label {
+  margin: $spacing $spacing-half;
+  display: block;
+  font-size: 100%;
+  max-width: 100%;
+  margin: 0 0 $spacing-half 0;
+
+  &.is-required {
+    font-weight: bold;
+  }
+
+  &.is-required::before {
+    content: "*";
+  }
+
+  &.error {
+    color: $danger-color;
+    clear: left;
+    display: block;
+    margin-top: $spacing-half;
+    /*  position: absolute;
+    top: 7rem;
+    left: 0; */
+  }
+}
+
+/* Texty inputs and textarea
+-------------------------------------------------- */
+
+#{$input-type-text} {
+  padding: $input-padding;
+  display: block;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: $input-bcg-color;
+  padding: $input-padding;
+  color: $input-color;
+
+  &:focus {
+    outline: 0;
+    border-color: $focus-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $input-bcg-disabled-color;
+    color: $disabled-color;
+  }
+
+  &:focus:invalid {
+    color: $danger-color;
+    border-color: $danger-color;
+  }
+  &:read-only {
+    background-color: $input-bcg-disabled-color;
+  }
+}
+
+// Placeholder
+@include placeholder(gray);
+/* Select
+-------------------------------------------------- */
+
+select {
+  padding: $input-padding;
+  display: block;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: $input-bcg-color;
+  margin-bottom: $spacing-double;
+}
+
+/* Checkbox and radio
+-------------------------------------------------- */
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: baseline;
+  cursor: pointer;
+  /* display: inline-block;
+  line-height: 1.25;
+  position: relative;*/
+}
+
+/* Inline form
+-------------------------------------------------- */
+
+.input-inline {
+  @include mqMin($break-s) {
+    .input-wrap {
+      display: inline-block;
+    }
+
+    label {
+      display: inline;
+    }
+
+    #{$input-type-text} {
+      display: inline;
+      width: auto;
+      margin: 0 $spacing 0 0;
+    }
+
+    select {
+      display: inline;
+      width: auto;
+      margin: 0 $spacing 0 0;
+    }
+  }
+}

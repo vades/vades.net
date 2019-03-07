@@ -1,0 +1,88 @@
+/* Dropdown
+-------------------------------------------------- */
+.dropdown {
+  display: none;
+  text-align: left;
+  background-color: $bcg-color;
+  @include boxShadow($box-shadow);
+  padding: $spacing;
+  z-index: $zindex-dropdown;
+
+  li {
+    margin-bottom: $spacing;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .delim{
+    border-top: solid 1px $border-color;
+  }
+  .header{
+    text-align: center;
+  }
+
+  [role=menuitem] {
+    white-space: nowrap;
+    text-align: left;
+    display: block;
+    min-width: 100%;
+    margin-bottom: $spacing;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mqMax($break-s - 1) {
+    position: fixed;
+    width: 75%;
+    top: 0;
+    //left: 0;
+    bottom: 0;
+
+    &:not(.right) {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+  }
+
+  @include mqMin($break-s) {
+    position: absolute;
+    width: 100%;
+    min-width: 30rem;
+
+    &.right {
+      right: 0;
+    }
+
+    &.has-arrow {
+      margin-top: $spacing-half;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        border-width: $spacing;
+        border-style: solid;
+        bottom: 100%;
+        left: 5%;
+        margin-left: -$spacing;
+        border-color: transparent transparent $bcg-color-inverse transparent;
+      }
+
+      &.right {
+        &::after {
+          left: 95%;
+        }
+      }
+    }
+  }
+
+  &.is-on{
+    display: block;
+  }
+
+}

@@ -1,0 +1,149 @@
+/* Displays an element as block
+-------------------------------------------------- */
+// Display inline
+.inline {
+  display: inline;
+}
+// Display block on all devices
+.block {
+  display: block;
+}
+
+// Display block up to the Extra Smal devices
+.block-max-xs {
+  @include mqMax($break-xs - 1) {
+    display: block;
+  }
+}
+
+// Display block up to the Smal devices
+.block-max-s {
+  @include mqMax($break-s - 1) {
+    display: block;
+  }
+}
+
+// Display block up to the Medium devices
+.block-max-m {
+  @include mqMax($break-m - 1) {
+    display: block;
+  }
+}
+
+// Display block up to the Large devices
+.block-max-l {
+  @include mqMax($break-l - 1) {
+    display: block;
+  }
+}
+
+// Display block from the Extra Smal devices
+.block-min-xs {
+  @include mqMin($break-xs) {
+    display: block;
+  }
+}
+
+// Display block from the Smal devices
+.block-min-s {
+  @include mqMin($break-s) {
+    display: block;
+  }
+}
+
+// Display block from the Medium devices
+.block-min-m {
+  @include mqMin($break-m) {
+    display: block;
+  }
+}
+
+// Display block from the Large devices
+.block-min-l {
+  @include mqMin($break-l) {
+    display: block;
+  }
+}
+
+/* Display inline
+-------------------------------------------------- */
+.inline {
+  display: inline;
+}
+
+
+/* Hide element
+-------------------------------------------------- */
+// Hide element on all devices
+.hide {
+  display: none !important;
+}
+
+// Hide element up to the Extra Smal devices
+.hide-max-xs {
+  @include mqMax($break-xs - 1) {
+    display: none !important;
+  }
+}
+
+// Hide element up to the Smal devices
+.hide-max-s {
+  @include mqMax($break-s - 1) {
+    display: none !important;
+  }
+}
+
+// Hide element up to the Medium devices
+.hide-max-m {
+  @include mqMax($break-m - 1) {
+    display: none !important;
+  }
+}
+
+// Hide element up to the Large devices
+.hide-max-l {
+  @include mqMax($break-l - 1) {
+    display: none !important;
+  }
+}
+
+// Hide element from the Extra Smal devices
+.hide-min-xs {
+  @include mqMin($break-xs) {
+    display: none !important;
+  }
+}
+
+// Hide element from the Smal devices
+.hide-min-s {
+  @include mqMin($break-s) {
+    display: none !important;
+  }
+}
+
+// Hide element from the Medium devices
+.hide-min-m {
+  @include mqMin($break-m) {
+    display: none !important;
+  }
+}
+
+// Hide element from the Large devices
+.hide-min-l {
+  @include mqMin($break-l) {
+    display: none !important;
+  }
+}
+
+/* Over flow
+-------------------------------------------------- */
+.overflow-y-s {
+  overflow-y: scroll;
+}
+
+
+/* Displays a horizontal scroll bar if the screen is too smal
+-------------------------------------------------- */
+.v-scroll {
+  display: none !important;
+}

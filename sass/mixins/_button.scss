@@ -1,0 +1,61 @@
+/* Button base mixin
+-------------------------------------------------- */
+@mixin button() {
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  padding: $button-padding;
+  border: solid 1px $border-color;
+  background-color: $button-bcg-color;
+  text-decoration: none;
+  border-radius: $border-radius;
+  color: $button-color;
+  line-height: 1.3;
+
+  &:hover,
+  &:focus {
+    background-color: darken($button-bcg-color, 20%);
+  }
+
+  &:focus {
+    outline: 1px solid $focus-color;
+    outline-offset: -4px;
+  }
+}
+
+/* Button transparent mixin
+-------------------------------------------------- */
+@mixin buttonTransparent() {
+  background: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+
+  &:focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+}
+
+/* Button disabled mixin
+-------------------------------------------------- */
+@mixin buttonDisabled() {
+  cursor: not-allowed;
+    border-color: transparent;
+    background-color: lighten($button-bcg-color, 10%);
+}
+
+/* Button colored mixin
+-------------------------------------------------- */
+@mixin buttonColored($button-color,$text-color: #fff) {
+  border-color: darken($button-color, 10%);
+  color: $text-color;
+  background-color: $button-color;
+
+  &:hover {
+    background-color: darken($button-color, 20%);
+  }
+}

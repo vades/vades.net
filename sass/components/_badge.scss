@@ -1,0 +1,44 @@
+/* Badge
+-------------------------------------------------- */
+
+.badge {
+  text-decoration: none;
+  display: inline;
+  padding: $spacing-half $spacing;
+  font-size: 60%;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: $border-radius;
+  background-color: $button-bcg-color;
+
+  &.is-info {
+    color: $white;
+    background-color: $info-color;
+  }
+
+  &.is-success {
+    color: $white;
+    background-color: $success-color;
+  }
+
+  &.is-warning {
+    color: $white;
+    background-color: $warning-color;
+  }
+
+  &.is-danger {
+    color: $white;
+    background-color: $danger-color;
+  }
+
+  &.is-notification {
+    
+    border-radius: 50%;
+    position: absolute;
+    top: -$spacing-double;
+    right: -$spacing-double;
+  }
+}

@@ -1,0 +1,30 @@
+/* accordion
+-------------------------------------------------- */
+.accordion {
+  margin-bottom: $spacing;
+  header {
+    @include displayFlex();
+    @include alignItems(center);
+    @include justifyContent(space-between);
+    width: 100%;
+    cursor: pointer;
+    font-size: 120%;
+    &::after {
+      margin-left: $spacing;
+      font-size: 130%;
+    }
+
+    &[aria-expanded="false"] {
+      &::after {
+        content: "+";
+      }
+    }
+  
+    &[aria-expanded="true"] {
+      &::after {
+        content: "-";
+      }
+    }
+  }
+  article {}
+}

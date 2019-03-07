@@ -1,0 +1,36 @@
+/* Body
+-------------------------------------------------- */
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  color: $font-color;
+  font-family: $font-family;
+  line-height: $font-height;
+  background-color: $body-bcg-color;
+  font-size: $body-font-size;
+
+  // Font size for medium devices
+  @include mqMin($break-s) {
+    font-size: $body-font-size * 1.05;
+  }
+
+  // Font size for lmedium devices
+  @include mqMin($break-m) {
+    font-size: $body-font-size * 1.15;
+  }
+
+  // Font size for large devices
+  @include mqMin($break-l) {
+    font-size: $body-font-size * 1.25;
+  }
+}
+
+* {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}

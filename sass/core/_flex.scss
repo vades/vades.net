@@ -1,0 +1,39 @@
+/* Display
+-------------------------------------------------- */
+.flex {
+  @include displayFlex();
+}
+
+/* Justify content
+-------------------------------------------------- */
+.justify-content-fs {
+  @include justifyContent(flex-start);
+}
+
+.justify-content-fe {
+  @include justifyContent(flex-end);
+}
+
+.justify-content-c {
+  @include justifyContent(center);
+}
+
+.justify-content-sb {
+  @include justifyContent(space-between);
+}
+
+.justify-content-sa {
+  @include justifyContent(space-around);
+}
+
+.justify-content-se {
+  @include justifyContent(space-evenly);
+}
+
+
+
+/* Align items
+-------------------------------------------------- */
+.align-items-c {
+  @include alignItems(center);
+}

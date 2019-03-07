@@ -1,0 +1,60 @@
+/* Table
+-------------------------------------------------- */
+table {
+  font-size: 100%;
+  width: 100%;
+  margin-bottom: $spacing;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: $bcg-color;
+
+  th,
+  td {
+    text-align: left;
+    padding: $spacing;
+    vertical-align: top;
+  }
+
+  /* Condensed */
+  &.is-condensed {
+    font-size: 90%;
+
+    th,
+    td {
+      padding: $spacing-half;
+    }
+  }
+  /* Bordered table */
+  &.is-bordered {
+
+    th,
+    td {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  /* Striped table */
+  &.is-striped {
+    tbody {
+      tr:nth-child(odd) {
+        background-color: $table-strip-bcg-color;
+      }
+    }
+  }
+
+  /* Hover */
+  &.has-hover {
+    tbody {
+      tr:hover {
+        background-color: $table-hover-bcg-color;
+      }
+    }
+  }
+
+  /* Disabled, grayed out etc. */
+  .is-disabled {
+   >td {
+     color: lighten($disabled-color,10%);
+    }
+  }
+}

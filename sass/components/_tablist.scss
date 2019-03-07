@@ -1,0 +1,43 @@
+/* Tab
+-------------------------------------------------- */
+$tab-border-w: 1px;
+[role="tablist"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ 
+  li,a {
+    display: block;
+   @include mqMin($break-s) {
+      display: inline-block;
+    }
+  }
+  a {
+    text-decoration: none;
+    padding: $spacing/2 $spacing;
+    border: $tab-border-w solid $border-color;
+    border-bottom: 0;
+    @include mqMin($break-s) {
+      border: 0;
+    }
+    /* &:focus {
+      outline: none;
+      box-shadow: inset 0 0 0 2px $tab-focus-color;
+    } */
+  }
+  [aria-selected]{
+    background: $bcg-color;
+    font-weight: bold;
+    @include mqMin($break-s) {
+      border: $tab-border-w solid $border-color;
+      border-bottom: 0;
+      position: relative;
+      top: $tab-border-w;
+
+    }
+    
+  }
+  &.is-outlined {
+    
+  }
+}

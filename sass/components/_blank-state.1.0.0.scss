@@ -1,0 +1,36 @@
+/* Blank state
+-------------------------------------------------- */
+.blank-state {
+  text-align: center;
+  padding: $spacing;
+
+  header {
+    font-size: 130%;
+    margin: $spacing 0;
+  }
+
+  &.is-info {
+    header {
+      color: $info-color;
+    }
+  }
+
+  &.is-success {
+    header {
+      color: $success-color;
+    }
+  }
+
+  &.is-warning {
+    header {
+      color: $warning-color;
+    }
+  }
+
+  &.is-danger {
+    header {
+      color: $danger-color;
+    }
+  }
+
+}

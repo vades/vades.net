@@ -1,0 +1,41 @@
+/* Canvas
+-------------------------------------------------- */
+.vds-canvas {
+  background-color: $bcg-color;
+  margin: $spacing 0;
+  //padding: $spacing-half $spacing;
+
+  header {
+    /*   @include displayFlex();
+    @include justifyContent(space-between);
+    @include alignItems(center);
+    width: 100%; */
+    padding: $spacing-half $spacing;
+    text-align: right;
+
+    //.close {
+    //font-size: 160%;
+    //cursor: pointer;
+    color: $gray-40;
+    font-weight: bold;
+    // }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  article {
+    padding: $spacing;
+  }
+
+  footer {
+    border-top: solid 1px $border-color;
+    text-align: right;
+    padding: $spacing;
+
+    &:empty {
+      display: none;
+    }
+  }
+}

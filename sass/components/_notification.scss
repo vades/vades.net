@@ -1,0 +1,47 @@
+/* Notification
+-------------------------------------------------- */
+.notification{
+  @include displayFlex();
+  @include justifyContent(space-between);
+  @include alignItems(center);
+  padding: $spacing $spacing-double;
+  background-color: lighten($light-bcg-color,5%);
+  //background-color: $lightest-bcg-color;
+  border: solid darken($light-bcg-color,10%);
+  border-width: 1px 1px 1px 30px;
+ 
+}
+
+.notification{
+  strong{
+    padding-right: $spacing;
+  }
+  button{
+    color:  darken($light-bcg-color,30%);
+    font-size: 110%;
+  }
+  &.is-info{
+    border-color: $info-color;
+    strong{
+      color: $info-color;
+    }
+  }
+  &.is-success{
+    border-color: $success-color;
+    strong{
+      color: $success-color;
+    }
+  }
+  &.is-warning{
+    border-color: $warning-color;
+    strong{
+      color: $warning-color;
+    }
+  }
+  &.is-danger{
+    border-color: $danger-color;
+    strong{
+      color: $danger-color;
+    }
+  }
+}

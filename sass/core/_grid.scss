@@ -1,0 +1,109 @@
+/* Grid
+-------------------------------------------------- */
+// https://www.toptal.com/sass/css3-flexbox-sass-grid-tutorial
+// https://mono.software/2016/12/02/building-a-simple-css-grid-with-flexbox/
+// https://zellwk.com/blog/responsive-grid-system/
+.grid {
+  //box-sizing: border-box;
+  @include displayFlex();
+  @include flexWrap(wrap);
+
+  >* {
+    @include flexBasis(100%);
+
+    /* @if $grid_gutter !='0' {
+      margin: 0 $grid_gutter/2;
+    } */
+  }
+
+  // All devices
+  &.auto {
+    >* {
+      flex: 1 1 0;
+    }
+  }
+
+  // Extra Small devices
+  @include mqMin(1px) {
+    &.auto-xs {
+      >* {
+        flex: 1 1 0;
+      }
+    }
+  }
+
+  // Small devices
+  @include mqMin($break-s) {
+    &.auto-s {
+      >* {
+        flex: 1 1 0;
+      }
+    }
+  }
+
+  // Medium devices
+  @include mqMin($break-m) {
+    &.auto-m {
+      >* {
+        flex: 1 1 0;
+      }
+    }
+  }
+
+  // Large devices
+  @include mqMin($break-l) {
+    &.auto-l {
+      >* {
+        flex: 1 1 0;
+      }
+    }
+  }
+}
+
+// Displays cols on all devices
+@include gridColClasses('', $grid_cols, $grid_gutter);
+
+// Displays cols only on Extra Small devices and bigger
+@include mqMin($break-xs) {
+  @include gridColClasses(-xs, $grid_cols, $grid_gutter); 
+}
+
+// Displays cols only on Small devices and bigger
+@include mqMin($break-s) {
+  @include gridColClasses(-s, $grid_cols, $grid_gutter);
+}
+
+// Displays cols only on Medium devices and bigger
+@include mqMin($break-m) {
+  @include gridColClasses(-m, $grid_cols, $grid_gutter);
+}
+
+// Displays cols only on Large devices and bigger
+@include mqMin($break-l) {
+  @include gridColClasses(-l, $grid_cols, $grid_gutter);
+}
+
+/* Child col classes
+-------------------------------------------------- */
+// Displays cols on all devices
+@include generateChildColClasses('', $child_cols, $child_cols_gutter);
+
+// Displays cols only on  Extra Small devices and bigger
+@include mqMin($break-xs) {
+  @include generateChildColClasses(-xs, $child_cols, $child_cols_gutter);
+}
+
+// Displays cols only on Small devices and bigger
+@include mqMin($break-s) {
+  @include generateChildColClasses(-s, $child_cols, $child_cols_gutter);
+}
+
+// Displays cols only on Medium devices and bigger
+@include mqMin($break-m) {
+  @include generateChildColClasses(-m, $child_cols, $child_cols_gutter);
+}
+
+// Displays cols only on Large devices and bigger
+@include mqMin($break-l) {
+  @include generateChildColClasses(-l, $child_cols, $child_cols_gutter);
+}

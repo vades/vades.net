@@ -1,0 +1,11 @@
+/* Tabpanel
+-------------------------------------------------- */
+[role="tabpanel"] {
+  &[aria-hidden="true"] {
+    display: none;
+  }
+  padding: $spacing 0;
+ /*  background: $bcg-color;
+  border: 1px solid $border-color;
+  padding: $spacing; */
+}

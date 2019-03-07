@@ -1,0 +1,56 @@
+/* Tab
+-------------------------------------------------- */
+[role="tablist"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    &[aria-selected="true"] {
+      font-weight: bold;
+      border-bottom: solid 2px $border-color;
+    }
+  }
+
+  li,
+  a {
+    display: block;
+
+    @include mqMin($break-s) {
+      display: inline-block;
+    }
+  }
+
+  a {
+    padding: $spacing-double 0;
+    width: 100%;
+    text-decoration: none;
+    border-bottom: solid 1px $border-color;
+
+  }
+
+
+
+  // Look from the small devices
+  @include mqMin($break-s) {
+    border-bottom: solid 1px $border-color;
+
+    a {
+      padding: 0 $spacing-double $spacing 0;
+      border-bottom: 0;
+    }
+  }
+
+}
+
+/* Tab panel
+-------------------------------------------------- */
+[role="tabpanel"] {
+  &[aria-hidden="true"] {
+    display: none;
+  }
+  padding: $spacing 0;
+ /*  background: $bcg-color;
+  border: 1px solid $border-color;
+  padding: $spacing; */
+}

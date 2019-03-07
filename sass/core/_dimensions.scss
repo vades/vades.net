@@ -1,0 +1,20 @@
+/* Element Width
+-------------------------------------------------- */ 
+
+// Set width on all devices
+@include  generateWidthClasses('',10);
+
+// Set width up to the Extra Smal devices
+@include  generateWidthClasses('-xs',10);
+
+// Set width up to the Smal devices
+@include  generateWidthClasses('-s',10);
+
+// Set width up to the Medium devices
+@include  generateWidthClasses('-m',10);
+
+// Set width up to the Large devices
+@include  generateWidthClasses('-l',10);
+
+// Set width from the Extra Smal devices
+@include  generateWidthClasses('-xl',10);

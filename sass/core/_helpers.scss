@@ -1,0 +1,344 @@
+/* Debug
+-------------------------------------------------- */
+.debug {
+  color: red !important;
+
+  &.border {
+    border: solid 1px red !important;
+  }
+}
+
+/* Clear fix
+-------------------------------------------------- */
+.clearfix {
+  @include clearFix();
+}
+
+/* Float left
+-------------------------------------------------- */
+// All devices
+.float-left {
+  float: left;
+}
+
+// Extra Small devices
+@include mqMin(1px) {
+  .float-left-xs {
+    float: left;
+  }
+}
+
+// Small devices
+@include mqMin($break-s) {
+  .float-left-s {
+    float: left;
+  }
+}
+
+// Medium devices
+@include mqMin($break-m) {
+  .float-left-m {
+    float: left;
+  }
+}
+
+// Large devices
+@include mqMin($break-l) {
+  .float-left-l {
+    float: left;
+  }
+}
+
+/* Float right
+-------------------------------------------------- */
+// All devices
+.float-right {
+  float: right;
+}
+
+// Extra Small devices
+@include mqMin(1px) {
+  .float-right-xs {
+    float: right;
+  }
+}
+
+// Small devices
+@include mqMin($break-s) {
+  .float-right-s {
+    float: right;
+  }
+}
+
+// Medium devices
+@include mqMin($break-m) {
+  .float-right-m {
+    float: right;
+  }
+}
+
+// Large devices
+@include mqMin($break-l) {
+  .float-right-l {
+    float: right;
+  }
+}
+
+
+/* Position
+-------------------------------------------------- */
+.position-relative {
+  position: relative;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+
+
+/* Padding
+-------------------------------------------------- */
+.padding {
+  padding: $spacing;
+}
+
+.padding-double {
+  padding: $spacing-double;
+}
+
+.padding-triple {
+  padding: $spacing-triple;
+}
+
+.padding-quad {
+  padding: $spacing-quad;
+}
+
+.padding-half {
+  padding: $spacing-half;
+}
+
+/* Margin
+-------------------------------------------------- */
+.margin {
+  margin: $spacing;
+}
+
+.margin-double {
+  margin: $spacing-double;
+}
+
+.margin-triple {
+  margin: $spacing-triple;
+}
+
+.margin-quad {
+  margin: $spacing-quad;
+}
+
+.margin-half {
+  margin: $spacing-half;
+}
+//TODO: deprecated - replace all occurences with margin-b
+.margin-bottom {
+  margin-bottom: $spacing;
+}
+
+.margin-t {
+  margin-top: $spacing;
+}
+
+.margin-r {
+  margin-right: $spacing;
+}
+
+.margin-b {
+  margin-bottom: $spacing;
+}
+
+.margin-l {
+  margin-left: $spacing;
+}
+
+.margin-lr-auto {
+  margin: auto;
+}
+
+/*Fonts
+-------------------------------------------------- */
+.font-serif {
+  font-family: $font-serif;
+}
+
+.font-sans-serif {
+  font-family: $font-sans-serif;
+}
+
+.font-light {
+  font-weight: $font-weight-light;
+}
+
+.font-regular {
+  font-weight: $font-weight-regular;
+}
+
+.font-heavy {
+  font-weight: $font-weight-heavy;
+}
+
+/* Align
+-------------------------------------------------- */
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-justify {
+  text-align: justify;
+}
+
+/* Flexbox justify
+-------------------------------------------------- */
+.justify-content-center {
+  @include justifyContent(center);
+}
+
+.justify-content-end {
+  @include justifyContent(end);
+}
+
+
+
+/* Truncate text
+-------------------------------------------------- */
+.truncate-100px {
+  @include truncateString(100px);
+}
+
+.truncate-200px {
+  @include truncateString(200px);
+}
+
+/* Has border
+-------------------------------------------------- */
+.has-border {
+  border: solid 1px $border-color;
+}
+
+.border-bottom {
+  border-bottom: solid 1px $border-color !important;
+}
+
+/* Border color
+-------------------------------------------------- */
+.border-primary {
+  border-color: $primary-color !important;
+}
+
+.border-info {
+  border-color: $info-color !important;
+}
+
+.border-success {
+  border-color: $success-color !important;
+}
+
+.borderr-warning {
+  border-color: $warning-color !important;
+}
+
+.border-danger {
+  border-color: $danger-color !important;
+}
+
+
+
+/* Box shadow
+-------------------------------------------------- */
+.box-shadow {
+  @include boxShadow(1px 1px 5px 0px rgba(50, 50, 50, 0.29));
+}
+
+/* Circle
+-------------------------------------------------- */
+.circle {
+  @include borderRadius(50%);
+}
+
+/* Number circle
+-------------------------------------------------- */
+/* .number-circle {
+  display: inline-block;
+  width: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 130%;
+  color: $light-font-color;
+  background: $dark-bcg-color;
+  @include borderRadius(50%);
+} */
+
+.text-circle {
+  @include borderRadius(50%);
+  @include displayFlex();
+  @include flexDirection(column);
+  @include alignItems(center);
+  @include justifyContent(center);
+  padding: $spacing-half;
+}
+
+/* Cursor
+-------------------------------------------------- */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* More info
+-------------------------------------------------- */
+.more-info {
+  &::after {
+    padding-right: $spacing;
+    font-family: fontawesome;
+    content: "\f054";
+  }
+}
+
+/* Ictive item
+-------------------------------------------------- */
+.is-active {
+  cursor: text;
+  @include boxShadow(inset 0px 0px 10px 0px rgba(128, 128, 128, 0.4));
+
+  &:before {
+    padding-right: $spacing;
+    font-family: fontawesome;
+    content: "\f00c";
+    color: $success-color;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+  }
+
+}
+
+// Container with max width
+.container-max-w {
+  margin: 0 auto;
+  max-width: $container-max-w;
+}

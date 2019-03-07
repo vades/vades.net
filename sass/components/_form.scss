@@ -1,0 +1,22 @@
+/* Form 
+-------------------------------------------------- */
+
+legend {
+  color: lighten($font-color, 10%);
+  display: block;
+  width: 100%;
+  font-size: 105%;
+  font-style: italic;
+  margin-bottom: $spacing;
+  border-bottom: 1px solid $border-color;
+}
+
+fieldset {
+  margin: 0 0 $spacing 0;
+  padding: 0;
+  border: 0;
+}
+
+.submit-area{
+  margin-top: $spacing-double;
+}

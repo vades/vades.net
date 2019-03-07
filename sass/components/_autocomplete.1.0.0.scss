@@ -1,0 +1,19 @@
+/* Search Autocomplete
+-------------------------------------------------- */
+.vds-autocomplete {
+  position: relative;
+
+  //width: 600px;
+  >div {
+    background-color: $bcg-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: $spacing;
+    z-index: $zindex-dropdown;
+    @include boxShadow($box-shadow);
+    border: solid 1px $border-color;
+    font-size: 90%;
+  }
+}

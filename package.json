@@ -1,0 +1,31 @@
+{
+  "name": "gspgen",
+  "version": "1.0.0",
+  "description": "Gulp static pages generator",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "This is a test command"
+  },
+  "keywords": [
+    "gulp",
+    "static",
+    "site",
+    "generator",
+    "nodejs",
+    "html",
+    "css"
+  ],
+  "author": "Martin Vach",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {}
+}

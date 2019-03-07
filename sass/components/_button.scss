@@ -1,0 +1,129 @@
+/* Button
+-------------------------------------------------- */
+
+.button {
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  padding: $button-padding;
+  border: solid 1px $border-color;
+  background-color: $button-bcg-color;
+  text-decoration: none;
+  border-radius: $border-radius;
+  color: $button-color;
+
+  &:hover,
+  &:focus {
+    background-color: darken($button-bcg-color, 20%);
+  }
+
+  &:focus {
+    outline: 1px solid $focus-color;
+    outline-offset: -4px;
+  }
+
+  &.is-text {
+    padding: $spacing-half 0;
+    border: 0;
+    background: transparent;
+
+   /*  &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: transparent;
+    } */
+
+    &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+  }
+
+  &.is-outlined {
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+
+    &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+  }
+
+
+  &.is-disabled {
+    cursor: not-allowed;
+    border-color: transparent;
+    background-color: lighten($button-bcg-color, 10%);
+  }
+
+
+  &.size-xs {
+    font-size: 80%;
+    padding: $spacing-half $spacing;
+  }
+
+  &.size-s {
+    font-size: 90%;
+    padding: $spacing-half $spacing;
+  }
+
+  &.size-m {
+    font-size: 140%;
+    padding: $spacing $spacing-and-half;
+  }
+
+  &.size-l {
+    font-size: 160%;
+    padding: $spacing-and-half $spacing-double;
+  }
+
+  &.size-xl {
+    font-size: 200%;
+    padding: $spacing-double $spacing-triple;
+  }
+
+  &.is-info {
+    border-color: transparent;
+    color: $white;
+    background-color: $info-color;
+
+    &:hover {
+      background-color: darken($info-color, 20%);
+    }
+  }
+
+  &.is-success {
+    border-color: darken($success-color, 10%);
+    color: $white;
+    background-color: $success-color;
+
+    &:hover {
+      background-color: darken($success-color, 20%);
+    }
+  }
+
+  &.is-warning {
+    border-color: darken($warning-color, 10%);
+    color: $white;
+    background-color: $warning-color;
+
+    &:hover {
+      background-color: darken($warning-color, 20%);
+    }
+  }
+
+  &.is-danger {
+    border-color: darken($danger-color, 10%);
+    color: $white;
+    background-color: $danger-color;
+
+    &:hover {
+      background-color: darken($danger-color, 20%);
+    }
+  }
+}

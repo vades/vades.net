@@ -1,0 +1,37 @@
+/* Pagination
+-------------------------------------------------- */
+.pagination {
+  @include displayFlex();
+  @include justifyContent(center);
+  @include flexWrap(wrap);
+  a {
+    margin-bottom: $spacing;
+    &.active{
+      font-weight: bold;
+      background-color: $border-color;
+      //color: $lightest-font-color;
+    }
+    &:hover:not(.active){
+      text-decoration: underline;
+    }
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      padding: $spacing $spacing-double;
+      border: 1px solid $border-color;
+      margin-left: -1px;
+    }
+
+    &:first-child {
+      span {
+        border-radius: $border-radius 0 0 $border-radius;
+      }
+    }
+
+    &:last-child {
+      span {
+        border-radius: 0 $border-radius $border-radius 0;
+      }
+    }
+  }
+}

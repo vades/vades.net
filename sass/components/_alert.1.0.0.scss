@@ -1,0 +1,81 @@
+/* Alert
+-------------------------------------------------- */
+.alert {
+  text-align: center;
+  padding: $spacing;
+  background-color: $bcg-color;
+  margin: $spacing 0;
+  border: solid 1px $border-color;
+  background-color: $bcg-color;
+
+  header {
+    font-size: 130%;
+    font-weight: bold;
+  }
+
+  .icon {
+    &::before {
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 2em;
+    }
+  }
+
+  // info
+  &.is-info {
+    //background-color: $info-bcg-color;
+    border-color: $info-color;
+    color: $info-color;
+
+    .icon {
+      &::before {
+        content: '\f05a';
+      }
+    }
+  }
+
+  // success
+  &.is-success {
+    //background-color: $success-bcg-color;
+    border-color: $success-color;
+    color: $success-color;
+
+    .icon {
+      &::before {
+        content: '\f058';
+      }
+    }
+  }
+
+  // warning
+  &.is-warning {
+    //background-color: $warning-bcg-color;
+    border-color: $warning-color;
+    color: $warning-color;
+
+    .icon {
+      &::before {
+        content: '\f071';
+      }
+    }
+  }
+
+  // danger
+  &.is-danger {
+    //background-color: $danger-bcg-color;
+    border-color: $danger-color;
+    color: $danger-color;
+
+    .icon {
+      &::before {
+        content: '\f06a';
+      }
+    }
+  }
+
+}

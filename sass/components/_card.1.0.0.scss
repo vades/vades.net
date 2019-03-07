@@ -1,0 +1,38 @@
+/* Card
+-------------------------------------------------- */
+
+:host,vds-card, .vds-card{
+  @include displayFlex();
+  @include justifyContent(space-between);
+  @include flexDirection(column);
+  text-align: center;
+  margin-bottom: $spacing;
+
+  header {
+    padding: $spacing $spacing $spacing-half $spacing;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .content {
+    flex: 1 0 auto;
+    @include displayFlex();
+    @include flexDirection(column);
+    padding: $spacing-half $spacing $spacing $spacing;
+
+    footer {
+      margin-top: auto;
+      font-size: 90%;
+    }
+  }
+
+  @include mqMin($break-xs) {
+    margin-bottom: 0;
+
+    @if $child_cols_gutter !='0' {
+      margin: $child_cols_gutter/2;
+    }
+  }
+}
