@@ -5,28 +5,29 @@ $primary-color: #A3160B;
 $secondary-color: #F69A13;
 
 // Primary tints
-$primary-color-90: #180302;
-$primary-color-80: #480a05;
-$primary-color-70: #771008;
-$primary-color-60: #a7170b;
-$primary-color-50: #d71d0f;
-$primary-color-40: #f03728;
-$primary-color-30: #f46358;
-$primary-color-20: #f79088;
-$primary-color-10: #fabcb7;
-$primary-color-05: #fde9e7;
+$primary-color-10: #fde9e7;
+$primary-color-20: #fabcb7;
+$primary-color-30: #f79088;
+$primary-color-40: #f46358;
+$primary-color-50: #f03728;
+$primary-color-60: #d71d0f;
+$primary-color-70: #a7170b;
+$primary-color-80: #771008;
+$primary-color-90: #480a05;
+$primary-color-100: #180302;
+
 
 // Secondary tints
-$secondary-color-90: #190f01;
-$secondary-color-80: #4a2d03;
-$secondary-color-70: #7b4b05;
-$secondary-color-60: #ac6907;
-$secondary-color-50: #dd8708;
-$secondary-color-40: #f7a022;
-$secondary-color-30: #f8b553;
-$secondary-color-20: #faca84;
-$secondary-color-10: #fcdfb5;
-$secondary-color-05: #fef4e6;
+$secondary-color-10: #fef4e6;
+$secondary-color-20: #fcdfb5;
+$secondary-color-30: #faca84;
+$secondary-color-40: #f8b553;
+$secondary-color-50: #f7a022;
+$secondary-color-60: #dd8708;
+$secondary-color-70: #ac6907;
+$secondary-color-80: #7b4b05;
+$secondary-color-90: #7b4b05;
+$secondary-color-100: #4a2d03;
 
 // Fonts
 $font-color: $primary-color;
@@ -75,6 +76,17 @@ $danger-bcg-color: lighten($danger-color, 35%);
 // Basic colors
 $white: #ffffff;
 $black: #000000;
+$gray: #cccccc;
+$gray-10: #f2f2f2;
+$gray-20: #d9d9d9;
+$gray-30: #bfbfbf;
+$gray-40: #a6a6a6;
+$gray-50: #8c8c8c;
+$gray-60: #737373;
+$gray-70: #595959;
+$gray-80: #404040;
+$gray-90: #262626;
+$gray-100:  #0d0d0d;
 $blue: #3273dc;
 $cyan: #209cee;
 $turquoise: #00d1b2;
