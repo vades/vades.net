@@ -1,13 +1,29 @@
 <section id="home_reference">
   <!-- container -->
-  <div class="section-header"> 
+  <div class="section-header">
     <h2>Reference</h2>
-</div>
-  <div class="container-max-w"> 
+  </div>
+
+  <button class="toggle-modal" aria-controls="modal_1">Show modal</button>
+  <section id="modal_1" class="overlay" hidden>
+    <section class="modal">
+      <header>Modal title <button class="button is-text toggle-modal" aria-controls="modal_1">X</button></header>
+      <article>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+      </article>
+      <footer>
+        Modal footer
+      </footer>
+    </section>
+  </section>
+
+
+
+  <div class="container-max-w">
     <ul class="cards child-cols-1 child-cols-s-2 child-cols-l-4">
-        @@loop('spa-reference-loop.html', '/data/reference.json')
+      @@loop('spa-reference-loop.html', '/data/reference.json')
     </ul>
-   
+
   </div>
   <!-- /container -->
 </section>

@@ -1,6 +1,20 @@
+/* Modal overlay
+-------------------------------------------------- */
+.modal-overlay_ {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; //overflow: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $overlay-bcg-color;
+  z-index: $zindex-overlay;
+}
+
 /* Modal
 -------------------------------------------------- */
-// https://medium.com/@andrejsabrickis/a-fullscreen-modal-with-fixed-header-footer-and-a-scrollable-content-1656845c8171
 .modal {
   position: fixed;
   top: 0;
@@ -9,6 +23,14 @@
   left: 0;
   z-index: $zindex-modal;
   overflow: auto;
+
+  @include boxShadow(1px 1px 5px 0px rgba(50, 50, 50, 0.29));
+  background-color: $bcg-color;
+  margin: $spacing-quad;
+
+  >* {
+    padding: $spacing $spacing-double;
+  }
 
   .modal-inner {
     @include boxShadow(1px 1px 5px 0px rgba(50, 50, 50, 0.29));
