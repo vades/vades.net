@@ -1,11 +1,28 @@
 <li class="gallery">
-  <figure>
+  <figure class="toggle-modal" aria-controls="modal_@@id">
     <img src="https://via.placeholder.com/400x400?text=@@img" alt="@@title">
     <figcaption>@@title</figcaption>
   </figure>
-   <section id="modal_@@id" class="modal-overlay">
-     
-   </section>
+   <div id="modal_@@id" class="overlay" hidden>
+    <section class="modal align-left" role="dialog" aria-modal="true">
+      <header>@@title @@id<button class="button is-text toggle-modal" aria-controls="modal_@@id">X</button></header>
+      <article class="grid">
+        <div class="col-12 col-l-6">
+            <img src="https://via.placeholder.com/400x400?text=@@img" alt="@@title">
+        </div>
+        <div class="col-12 col-l-6">
+            <p><strong>Client:</strong>  <span>@@client</span></p>
+            <p><strong>Technologies:</strong>  <span>@@technologies</span></p>
+            <p><strong>Responsibilities:</strong>  <span>@@responsibilities</span></p> 
+            <a class="reference-link" href="@@link">Preview</a>
+        </div>
+        
+      </article>
+      <footer>
+        Modal footer
+      </footer>
+    </section>
+   </div>
   <!-- <div>
     <p><strong>Client:</strong>  <span>@@client</span></p>
     <p><strong>Technologies:</strong>  <span>@@technologies</span></p>

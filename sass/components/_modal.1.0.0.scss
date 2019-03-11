@@ -15,7 +15,7 @@
 
 /* Modal
 -------------------------------------------------- */
-.modal {
+[role="dialog"] {
   position: fixed;
   top: 0;
   right: 0;
@@ -30,21 +30,6 @@
 
   >* {
     padding: $spacing $spacing-double;
-  }
-
-  .modal-inner {
-    @include boxShadow(1px 1px 5px 0px rgba(50, 50, 50, 0.29));
-    background-color: $bcg-color;
-    margin: $spacing-quad;
-
-    >* {
-      padding: $spacing $spacing-double;
-    }
-
-    &.is-confirm {
-      width: 50%;
-      margin: 10rem auto 0;
-    }
   }
 
   header {

@@ -7,3 +7,8 @@ body {
   min-height: 100vh;
 }
 
+/* Reference
+-------------------------------------------------- */
+a[href=""].reference-link {
+  display: none;
+}
