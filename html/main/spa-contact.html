@@ -8,15 +8,16 @@
           <p>Please do not hesitate to contact me if you have any further questions or observations. Be specific when describing the information requested.</p>
       </div>
       <div class="col-s-6">
-          <form>
+        <div id="imgSpinner1">Spinner...</div>
+          <form id="contact_form" action="https://jsonplaceholder.typicode.com/todos">
               <fieldset>
                   <div class="input-wrap">
-                      <label for="id1">Enter your email address</label>
-                      <input type="text" />
+                      <label for="contact_email">Enter your email address</label>
+                      <input type="email" id="contact_email" name="contact_email" />
                   </div>
                   <div class="input-wrap">
-                      <label for="id2">Your message</label>
-                      <textarea name="name" id="" cols="30" rows="10"></textarea>
+                      <label for="contact_message">Your message</label>
+                      <textarea id="contact_message" name="contact_message" cols="30" rows="10"></textarea>
                   </div>
               </fieldset>
               <fieldset>
