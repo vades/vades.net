@@ -8,45 +8,60 @@
    */
   $("#contact_form").submit(function (e) {
 
-    e.preventDefault(); // avoid to execute the actual submit of the form.
+    e.preventDefault(); // avoid to execute the actual submit of the form
 
     var form = $(this);
     var url = form.attr('action');
+    // Get the button that was clicked  
+    var buttonSubmit = '#button_submit';
 
     $.ajax({
       type: "POST",
       url: url,
-      data: form.serialize(), // serializes the form's elements.
+      data: form.serialize(), // serializes the form's elements
+
       // shows the loader element before sending.
       beforeSend: function () {
-        $("#imgSpinner1").show();
+        $(buttonSubmit).append(notifySpinner());
+        $(buttonSubmit + ' span').hide();
       },
-      // hides the loader after completion of request, whether successfull or failor.             
+      // hides the loader after completion of request, whether success or fail             
       complete: function () {
-        $("#imgSpinner1").hide();
+       $('.notify-spinner').hide();
+       $(buttonSubmit + ' span').show();
       },
-      success: function (data) {
-        $('body').append(setNotification('Submission was successful.', 'is-success'));
+
+      success: function () {
+        $('body').append(notifyTemplate('Thank you for contacting us. You are very important to us, all information received will always remain confidential.', 'is-success'));
         $(form)[0].reset();
         setTimeout(function () {
-          $("#notify").hide();
+          $('#notify').hide();
         }, 7000);
         console.log('Submission was successful.');
-        console.log(data);
       },
-      error: function (data) {
-        $('body').append(setNotification('An error occurred.', 'is-danger'));
+      error: function () {
+        $('body').append(notifyTemplate('Sorry but your email was unable to send. Try it later', 'is-danger'));
         console.log('An error occurred.');
-        console.log(data);
       },
     });
 
   });
   /**
-   * set notification
+   * notify template
    */
-  function setNotification(message, type) {
-    return '<section id="notify" class="notify inverse ' + type + '">' + message + '</section>';
+  function notifyTemplate(message, type) {
+    return '<section class="notify-overlay">'+
+    '<section id="notify" class="notify inverse ' + type + '">'+
+    '<div>'  + message + '</div>'+
+    '<span class="close">&times;</span>'+
+    '</section></section>';
+  }
+
+   /**
+   * notify spinner
+   */
+  function notifySpinner() {
+    return '<img class="notify-spinner" src="./img/ajax-loader.gif" alt="@@title">';
   }
 
   /**

@@ -4,8 +4,19 @@ $notify-color: $gray-90;
 $notify-bcg-color: $gray-10;
 $notify-color-inverse: $gray-10;
 $notify-bcg-color-inverse: $gray-90;
+.notify-overlay{
+  position: relative;
+  z-index: 10000;
+  margin: 0 auto;
+}
 
 .notify {
+  position: fixed;
+  width: 100%;
+  max-width: 50%;
+  //top: 0;
+  left: 25%;
+  bottom: 2%;
   @include displayFlex();
   @include justifyContent(space-between);
   @include alignItems(center);
