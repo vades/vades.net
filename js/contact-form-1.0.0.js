@@ -1,10 +1,21 @@
-/* Contatct form script version 1.0.0
+/* Contact form script version 1.0.0
 -------------------------------------------------- */
 
 (function ($) {
+  /**
+   * Form validation
+   */
+  var options = {
+    errorClass: 'validate-error',
+    successClass: 'validate-success',
+    errorsWrapper: '<div class="validate-errors"></div>',
+    errorTemplate: '<span></span>'
+    
+  }
+  var validate = $('#contact_form').parsley(options);
 
   /**
-   * this is the id of the form
+   * Form subnit
    */
   $("#contact_form").submit(function (e) {
 
@@ -32,7 +43,7 @@
       },
 
       success: function () {
-        $('body').append(notifyTemplate('Thank you for contacting us. You are very important to us, all information received will always remain confidential.', 'is-success'));
+        $('body').append(notifyTemplate('Thank you for contacting us.', 'is-success','You are very important to us, all information received will always remain confidential.'));
         $(form)[0].reset();
         setTimeout(function () {
           $('#notify').hide();
@@ -40,7 +51,7 @@
         console.log('Submission was successful.');
       },
       error: function () {
-        $('body').append(notifyTemplate('Sorry but your email was unable to send. Try it later', 'is-danger'));
+        $('body').append(notifyTemplate('Sorry but your email was unable to send.', 'is-danger','Please try it later.'));
         console.log('An error occurred.');
       },
     });
@@ -49,11 +60,11 @@
   /**
    * notify template
    */
-  function notifyTemplate(message, type) {
+  function notifyTemplate(header, type,text) {
     return '<section class="notify-overlay">'+
     '<section id="notify" class="notify inverse ' + type + '">'+
-    '<div>'  + message + '</div>'+
-    '<span class="close">&times;</span>'+
+    '<header>'  + header + '</header>'+
+    '<article>'  + text + '</article>'+
     '</section></section>';
   }
 
@@ -61,7 +72,7 @@
    * notify spinner
    */
   function notifySpinner() {
-    return '<img class="notify-spinner" src="./img/ajax-loader.gif" alt="@@title">';
+    return '<img class="notify-spinner" src="./img/ajax-loader-dark.gif" alt="@@title">';
   }
 
   /**
