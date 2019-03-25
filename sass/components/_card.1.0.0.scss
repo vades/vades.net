@@ -1,7 +1,13 @@
 /* Card
 -------------------------------------------------- */
-
-:host,vds-card, .vds-card{
+.cards {
+  @include displayFlex();
+  @include flexWrap(wrap);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.card{
   @include displayFlex();
   @include justifyContent(space-between);
   @include flexDirection(column);

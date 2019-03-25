@@ -5,6 +5,45 @@ body {
   @include displayFlex();
   @include flexDirection(column);
   min-height: 100vh;
+  background: lighten($primary-color-10,3) url('../img/bcg-body.jpg');
+}
+
+/* Layout m (main) - without  sidebars
+-------------------------------------------------- */
+.layout-m{
+  #main{
+    padding: $spacing;
+    @include mqMin($break-l) {
+      padding: $spacing-double;
+    }
+  }
+}
+
+/* Common
+-------------------------------------------------- */
+.section-header{
+  text-align: center;
+}
+
+/* home_services
+-------------------------------------------------- */
+#home_services{
+  .card{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    header{
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      svg{
+        width: 48px;
+        height: 48px;
+        color: $primary-color-40;
+      }
+    }
+   
+  }
 }
 
 /* Reference

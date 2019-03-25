@@ -4,7 +4,7 @@
 #header {
   z-index: $zindex-header;
   height: $header-h;
-  background-color: #fff;
+  background: lighten($primary-color-10,3) url('../img/bcg-body.jpg');
   padding: $spacing;
 
   @include mqMin($break-l) {
@@ -35,8 +35,22 @@
 
 #headerPrimary {
   width: 90%;
+  
   @include mqMin($break-m) {
     width: 70%;
+  }
+  ul{
+    display: block;
+    width: 100%;
+   
+    @include displayFlex();
+  @include justifyContent(space-between);
+  @include alignItems(center);
+  li{
+    font-size: 110%;
+    padding: 0;
+    text-transform: uppercase;
+  }
   }
 }
 
