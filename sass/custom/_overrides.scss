@@ -23,6 +23,17 @@ body {
 -------------------------------------------------- */
 .section-header{
   text-align: center;
+  .text-icon{
+    svg{
+      width: 32px;
+      color: $primary-color-40;
+     
+    }
+    figcaption{
+      font-size: 160%;
+      text-transform: uppercase;
+    }
+  }
 }
 
 /* home_services
@@ -48,6 +59,13 @@ body {
 
 /* Reference
 -------------------------------------------------- */
-a[href=""].reference-link {
-  display: none; 
+#home_reference{
+  .gallery{
+    figure{
+      //width: 128px;
+    }
+  }
+  a[href=""].reference-link {
+    display: none; 
+  }
 }
