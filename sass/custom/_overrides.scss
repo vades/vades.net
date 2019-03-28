@@ -5,67 +5,156 @@ body {
   @include displayFlex();
   @include flexDirection(column);
   min-height: 100vh;
-  background: lighten($primary-color-10,3) url('../img/bcg-body.jpg');
+  background: lighten($primary-color-10, 3) url('../img/bcg-body.jpg');
 }
 
 /* Layout m (main) - without  sidebars
 -------------------------------------------------- */
-.layout-m{
-  #main{
-    padding: $spacing;
+.layout-m {
+  #main {
+
+    //padding: $spacing;
     @include mqMin($break-l) {
-      padding: $spacing-double;
+      //padding: $spacing-double;
     }
   }
 }
 
 /* Common
 -------------------------------------------------- */
-.section-header{
+#main {
+  >section {
+    padding: $spacing;
+  }
+}
+
+.section-header {
   text-align: center;
-  .text-icon{
-    svg{
+
+  .text-icon {
+    svg {
       width: 32px;
       color: $primary-color-40;
-     
+
     }
-    figcaption{
+
+    figcaption {
       font-size: 160%;
       text-transform: uppercase;
     }
   }
 }
 
+// Validate errors
+.validate-errors {
+  >* {
+    font-weight: bold;
+
+    &::before {
+      content: "*";
+    }
+  }
+}
+
 /* home_services
 -------------------------------------------------- */
-#home_services{
-  .card{
+#home_services {
+  background: $secondary-color-20;
+
+  .card {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    header{
+
+    header {
       text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      svg{
+      margin: 0 auto;
+
+      svg {
         width: 48px;
         height: 48px;
         color: $primary-color-40;
       }
     }
-   
+
   }
 }
 
 /* Reference
 -------------------------------------------------- */
-#home_reference{
-  .gallery{
-    figure{
-      //width: 128px;
+#home_reference {
+  border-top: solid 10px darken(#f9d6a4, 3%);
+  border-bottom: solid 10px darken(#f9d6a4, 10%);
+  background: $secondary-color-30;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9d6a4+0,faca84+100 */
+  background: #f9d6a4;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f9d6a4 0%, #faca84 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f9d6a4 0%, #faca84 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f9d6a4 0%, #faca84 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9d6a4', endColorstr='#faca84', GradientType=0);
+
+  /* IE6-9 */
+  .text-icon {
+    svg {
+
+      color: $secondary-color-60;
+
+    }
+
+    figcaption {
+      color: $secondary-color-80;
     }
   }
-  a[href=""].reference-link {
-    display: none; 
+
+  .gallery {
+    figure {
+      width: 50%;
+      cursor: pointer;
+
+      img {
+        object-fit: cover;
+        //height: 140px;
+        border: solid 5px lighten($secondary-color-30, 10%);
+      }
+
+    }
   }
+
+  a[href=""].reference-link {
+    display: none;
+  }
+}
+
+/* Contact
+-------------------------------------------------- */
+#home_about {
+  background: $primary-color-10;
+
+  border-bottom: solid 10px darken($primary-color-10, 3%);
+
+}
+
+/* Contact
+-------------------------------------------------- */
+#home_contact {}
+
+#contact_form {
+ 
+  margin-top: $spacing-double;
+  /* border: solid 10px $primary-color-10;
+  padding: $spacing-double; */
+  .input-wrap {
+    margin-bottom: $spacing-double;
+  }
+}
+
+#button_submit {
+  width: 100%;
+  font-size: 120%;
+  text-transform: uppercase;
+  padding: $spacing-double;
 }
