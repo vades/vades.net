@@ -25,5 +25,14 @@
     "responsibilities":"Project consultation and conception. Converting from flash to HTML5. Programming using jQuery, AJAX, JSON, PHP, Bootstrap, responsive techniques, HTML 5, CSS 3",
     "img":"artdomino.jpg",
     "link":"https://www.art-domino.com/index.php/shop"
+  },
+  { 
+    "id": "4", 
+    "title": "ART-DOMINO", 
+    "client": "ART-DOMINO® GALERIE, Berlin, Germany",
+    "technologies":"Laravel PHP, framework, MVC, MySQL, jQuery, AJAX , JSON, Bootstrap, LESS, HTML, CSS, XML, NetBeans, GIT.",
+    "responsibilities":"Project consultation and conception. Converting from flash to HTML5. Programming using jQuery, AJAX, JSON, PHP, Bootstrap, responsive techniques, HTML 5, CSS 3",
+    "img":"artdomino.jpg",
+    "link":"https://www.art-domino.com/index.php/shop"
   }
 ]

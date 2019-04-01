@@ -1,24 +1,76 @@
 /* Header
 -------------------------------------------------- */
+#headerStripe {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zindex-header + 1;
+  @include displayFlex();
+  @include justifyContent(space-between);
+
+  >* {
+    /* display: inline-block;*/
+    width: 10%;
+    height: 3px;
+    background-color: $primary-color-10;
+   
+    &:nth-child(2n){
+      background-color: $primary-color-20;
+    }
+    &:nth-child(3n){
+      background-color: $primary-color-40;
+    }
+    &:nth-child(4n){
+      background-color: $primary-color-30;
+    }
+    &:nth-child(5n){
+      background-color: $primary-color-60;
+    }
+    &:nth-child(6n){
+      background-color: $primary-color-50;
+    }
+    &:nth-child(7n){
+      background-color: $primary-color-30;
+    }
+    &:nth-child(8n){
+      background-color: $primary-color-40;
+    }
+    &:nth-child(9n){
+      background-color: $primary-color-20;
+    }
+    &:nth-child(10n){
+      background-color: $primary-color-10;
+    }
+  }
+
+ 
+}
 
 #header {
   z-index: $zindex-header;
+  top: 3px !important; //#headerStripe height
   height: $header-h;
-  background: lighten($primary-color-10,3) url('../img/bcg-body.jpg');
+  background: #fff;//lighten($primary-color-10, 3);
   padding: $spacing;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
 
   @include mqMin($break-l) {
+
     height: $header-h-l;
     padding: $spacing $spacing-double;
   }
 
   >section {
+
     @include displayFlex();
     @include justifyContent(space-between);
     @include alignItems(center);
     //flex: 1 0 auto;
     height: 100%;
-   /*  >*{
+    /*  >*{
       flex: 1 0 auto;
     } */
 
@@ -31,26 +83,34 @@
   @include justifyContent(space-between);
   @include alignItems(center);
 }
-#headerLogo{}
+
+#headerLogo {
+  svg {
+    height: 3rem;
+  }
+
+}
 
 #headerPrimary {
-  width: 90%;
-  
+  width:60%;
+
   @include mqMin($break-m) {
     width: 70%;
   }
-  ul{
+
+  ul {
     display: block;
     width: 100%;
-   
+
     @include displayFlex();
-  @include justifyContent(space-between);
-  @include alignItems(center);
-  li{
-    font-size: 110%;
-    padding: 0;
-    text-transform: uppercase;
-  }
+    @include justifyContent(space-between);
+    @include alignItems(center);
+
+    li {
+      font-size: 110%;
+      padding: 0;
+      text-transform: uppercase;
+    }
   }
 }
 
