@@ -6,6 +6,10 @@ body {
   @include flexDirection(column);
   min-height: 100vh;
   background: lighten($primary-color-10, 3) url('../img/bcg-body.jpg');
+   /* body overflow is hidden to hide main scrollbar when modal window is open */
+   &.modal-open {
+    overflow: hidden;
+  }
 }
 
 /* Layout m (main) - without  sidebars
@@ -39,7 +43,7 @@ body {
     }
 
     figcaption {
-      font-size: 160%;
+      font-size: 110%;
       text-transform: uppercase;
     }
   }
@@ -59,11 +63,27 @@ body {
 /* home_jumbotron
 -------------------------------------------------- */
 #home_jumbotron {
-  text-align: center;
+ 
+  @include mqMin($break-m) {
+   
+    @include displayFlex();
+    @include justifyContent(space-between);
+    @include alignItems(center);
+  }
+
+  @include mqMin($break-l) {
+    width: $container-max-w;
+    margin: 0 auto;
+  }
 
   .jumbotron-text {
     font-size: 130%;
     margin: $spacing-triple 0;
+    width: $container-max-w;
+    @include mqMin($break-m) {
+      font-size: 160%;
+      text-align: left;
+    }
   }
 
   .jumbotron-img {
@@ -71,6 +91,9 @@ body {
     svg {
       height: 20rem;
       width: 100%;
+      @include mqMin($break-m) {
+        height: 40rem;
+      }
     }
   }
 
@@ -80,6 +103,12 @@ body {
 -------------------------------------------------- */
 #home_services {
   border-top: solid 1px $primary-color-20;
+  .cards{
+    @include mqMin($break-l) {
+      width: $container-max-w;
+      margin: 0 auto;
+    }
+  }
  
   .card {
     text-align: center;
@@ -103,8 +132,8 @@ body {
 /* Reference
 -------------------------------------------------- */
 #home_reference {
-  border-top: solid 10px darken(#f9d6a4, 3%);
-  border-bottom: solid 10px darken(#f9d6a4, 10%);
+  border-top: solid 2px darken(#f9d6a4, 3%);
+  border-bottom: solid 2px darken(#f9d6a4, 10%);
   background: $secondary-color-30;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9d6a4+0,faca84+100 */
   background: #f9d6a4;
@@ -131,17 +160,40 @@ body {
   }
 
   .gallery {
+    @include mqMin($break-l) {
+      width: $container-max-w;
+      margin: 0 auto;
+    }
     > figure {
-      width: 50%;
+      width: 33.3333%;
       cursor: pointer;
-
-      img {
-        object-fit: cover;
-        height: 160px;
-        border: solid 5px lighten($secondary-color-30, 10%);
-        border-radius: 50%;
+      @include mqMin($break-l) {
+        width: 16.6666%;
       }
 
+      > img {
+        object-fit: cover;
+        height: 120px;
+        border: solid 5px lighten($secondary-color-30, 10%);
+        //border-radius: 50%;
+        @include mqMin($break-m) {
+          height: auto;
+        }
+      }
+
+    }
+    .modal{
+      article{
+        text-align: center;
+        @include mqMin($break-m) {
+          text-align: left;
+        }
+        figure{
+          img{
+            max-height: 500px;
+          }
+        }
+      }
     }
   }
 
@@ -150,18 +202,54 @@ body {
   }
 }
 
-/* Contact
+/* About
 -------------------------------------------------- */
 #home_about {
-  background: $primary-color-10;
+  //background: $primary-color-10;
 
   border-bottom: solid 10px darken($primary-color-10, 3%);
+  .grid{
+    @include mqMin($break-l) {
+      width: $container-max-w;
+      margin: 0 auto;
+    }
+  }
+  article{
+    @include mqMin($break-l) {
+     
+     
+    }
+    @include mqMin($break-m) {
+      padding: 0 $spacing-double;
+      margin: $spacing-double 0;
+      background-color: $bcg-color;
+      @include borderRadius(10px);
+      padding: $spacing-quad;
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+      -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+      box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+      
+     }
+  }
+  .about-me{
+    font-size: 120%;
+  }
+
+  .about-skils{
+   
+  }
+ 
 
 }
 
 /* Contact
 -------------------------------------------------- */
-#home_contact {}
+#home_contact {
+  @include mqMin($break-l) {
+    width:50%;
+    margin: 0 auto;
+  }
+}
 
 #contact_form {
 
@@ -178,5 +266,8 @@ body {
   width: 100%;
   font-size: 120%;
   text-transform: uppercase;
-  padding: $spacing-double;
+  padding: $spacing $spacing-double;
+  @include mqMin($break-l) {
+    width:auto;
+  }
 }

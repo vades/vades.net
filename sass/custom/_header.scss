@@ -68,11 +68,11 @@
     @include displayFlex();
     @include justifyContent(space-between);
     @include alignItems(center);
-    //flex: 1 0 auto;
     height: 100%;
-    /*  >*{
-      flex: 1 0 auto;
-    } */
+    @include mqMin($break-l) {
+      margin: 0 auto;
+      width: $container-max-w;
+    }
 
   }
 
@@ -95,7 +95,7 @@
   width:60%;
 
   @include mqMin($break-m) {
-    width: 70%;
+    width: 40%;
   }
 
   ul {

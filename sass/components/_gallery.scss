@@ -5,15 +5,16 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  figure {
+ & >figure {
     text-align: center;
+    img {
+      transition: all 1s;
+   
+       &:hover {
+         transform: scale(1.1);
+       }
+     }
   }
 
-  img {
-   transition: all 1s;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
+  
 }

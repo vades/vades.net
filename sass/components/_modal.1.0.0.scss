@@ -22,11 +22,17 @@
   bottom: 0;
   left: 0;
   z-index: $zindex-modal;
-  overflow: auto;
+  overflow: hidden;
+  @include displayFlex();
+    /* @include justifyContent(space-between); */
+    @include flexDirection(column);
 
   @include boxShadow(1px 1px 5px 0px rgba(50, 50, 50, 0.29));
   background-color: $bcg-color;
-  margin: $spacing-quad;
+  @include mqMin($break-s) {
+    margin: $spacing-quad;
+  }
+  //
 
   >* {
     padding: $spacing $spacing-double;
@@ -41,7 +47,7 @@
     width: 100%;
 
     .close {
-      font-size: 130%;
+      font-size: 160%;
       cursor: pointer;
       color: $gray-40;
       font-weight: bold;
@@ -50,6 +56,9 @@
     &:empty {
       display: none;
     }
+  }
+  article{
+    overflow-y: auto;
   }
 
   footer {

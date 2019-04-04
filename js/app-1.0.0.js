@@ -9,7 +9,7 @@
   $('.toggle-modal').on('click', function (e) {
     var selector = $(this);
     var target = '#' + selector.attr('aria-controls');
-
+    $('body').toggleClass('modal-open');
     // Set hidden true/false on target
     $(target).attr('hidden', function (_, attr) {
       return !attr
