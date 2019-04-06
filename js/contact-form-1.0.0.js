@@ -43,16 +43,19 @@
       },
 
       success: function () {
-        $('body').append(notifyTemplate('Thank you for contacting us.', 'is-success','You are very important to us, all information received will always remain confidential.'));
+        $('body').append(notifyTemplate('Thank you for contacting me. You are very important to me, all information received will always remain confidential.', 'is-success'));
         $(form)[0].reset();
         setTimeout(function () {
           $('#notify').hide();
         }, 7000);
         console.log('Submission was successful.');
       },
-      error: function () {
-        $('body').append(notifyTemplate('Sorry but your email was unable to send.', 'is-danger','Please try it later.'));
-        console.log('An error occurred.');
+      error: function (error) {
+      $('body').append(notifyTemplate('Sorry but your email was unable to send.', 'is-danger'));
+        setTimeout(function () {
+          $('#notify').hide();
+        }, 7000);
+        console.log(error);
       },
     });
 
@@ -60,10 +63,10 @@
   /**
    * notify template
    */
-  function notifyTemplate(header, type,text) {
+  function notifyTemplate(text, type) {
     return '<section class="notify-overlay">'+
-    '<section id="notify" class="notify inverse ' + type + '">'+
-    '<header>'  + header + '</header>'+
+    '<section id="notify" class="notify ' + type + '">'+
+    '<figure><img src="./img/'  + type + '.svg" width="64" height="64"></figure>'+
     '<article>'  + text + '</article>'+
     '</section></section>';
   }

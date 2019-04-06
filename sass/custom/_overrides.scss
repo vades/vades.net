@@ -60,6 +60,22 @@ body {
   }
 }
 
+// Validate errors
+.notify {
+  background-color: $primary-color-10;
+  color: $primary-color-80;
+  &.is-success {
+  
+    border-color: $primary-color-20;
+  }
+
+  &.is-danger {
+    background-color: $primary-color-80;
+    color: $primary-color-20;
+    border-color: $primary-color-80;
+  }
+}
+
 /* home_jumbotron
 -------------------------------------------------- */
 #home_jumbotron {
@@ -78,8 +94,8 @@ body {
 
   .jumbotron-text {
     font-size: 130%;
-    margin: $spacing-triple 0;
-    width: $container-max-w;
+   margin: $spacing-double 0;
+   text-align: center;
     @include mqMin($break-m) {
       font-size: 160%;
       text-align: left;
@@ -215,9 +231,8 @@ body {
     }
   }
   article{
-    @include mqMin($break-l) {
-     
-     
+    h3{
+      font-size: 120%
     }
     @include mqMin($break-m) {
       padding: 0 $spacing-double;
@@ -228,14 +243,20 @@ body {
       -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
       -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
       box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+     
       
      }
   }
   .about-me{
     font-size: 120%;
+    margin-bottom: $spacing-double;
+    @include mqMin($break-m) {
+      margin-bottom: 0;
+    }
   }
 
   .about-skils{
+   
    
   }
  

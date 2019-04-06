@@ -13,18 +13,27 @@ $notify-bcg-color-inverse: $gray-90;
 .notify {
   position: fixed;
   width: 100%;
-  max-width: 50%;
   //top: 0;
-  left: 25%;
-  bottom: 2%;
+  left: 0;
+  bottom: 0;
   @include displayFlex();
-  @include justifyContent(space-between);
+  //@include justifyContent(space-between);
   @include alignItems(center);
   color: $notify-color;
   padding: $spacing $spacing-double;
   background-color: $notify-bcg-color;
   border: solid $gray-20 1px;
   font-weight: bold;
+
+  @include mqMin($break-m) {
+    max-width: 70rem;
+    left: 25%;
+    bottom: 2%;
+  }
+
+  article{
+    padding-left: $spacing-double;
+  }
 
   .close {
     font-size: 120%;

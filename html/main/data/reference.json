@@ -1,6 +1,6 @@
 [
   { 
-    "id": "1", 
+    "id": "artdomino", 
     "title": "ART-DOMINO", 
     "client": "ART-DOMINO® GALERIE, Berlin, Germany",
     "technologies":"Laravel PHP, framework, MVC, MySQL, jQuery, AJAX , JSON, Bootstrap, LESS, HTML, CSS, XML, NetBeans, GIT.",
@@ -9,48 +9,48 @@
     "link":"https://www.art-domino.com/index.php/shop"
   },
   { 
-    "id": "2", 
-    "title": "ART-DOMINO", 
-    "client": "ART-DOMINO® GALERIE, Berlin, Germany",
-    "technologies":"Laravel PHP, framework, MVC, MySQL, jQuery, AJAX , JSON, Bootstrap, LESS, HTML, CSS, XML, NetBeans, GIT.",
-    "responsibilities":"Project consultation and conception. Converting from flash to HTML5. Programming using jQuery, AJAX, JSON, PHP, Bootstrap, responsive techniques, HTML 5, CSS 3",
-    "img":"artdomino.jpg",
+    "id": "ipat", 
+    "title": "P&G iPAT - Invoicing system", 
+    "client": "DAS STUDIO Torsten Hegner GmbH, Neu-Isenburg, Germany",
+    "technologies":"PHP (OOP), MVC, MySQL, jQuery, AJAX , JSON, FileMaker API, RESTful API, Bootstrap, LESS, HTML, CSS, XML, NetBeans, SVN.",
+    "responsibilities":"PHP (OOP), MVC, MySQL, jQuery, AJAX , JSON, FileMaker API, RESTful API, Bootstrap, LESS, HTML, CSS, XML, NetBeans, SVN.",
+    "img":"ipat.jpg",
     "link":""
   },
   { 
-    "id": "3", 
-    "title": "ART-DOMINO", 
-    "client": "ART-DOMINO® GALERIE, Berlin, Germany",
-    "technologies":"Laravel PHP, framework, MVC, MySQL, jQuery, AJAX , JSON, Bootstrap, LESS, HTML, CSS, XML, NetBeans, GIT.",
-    "responsibilities":"Project consultation and conception. Converting from flash to HTML5. Programming using jQuery, AJAX, JSON, PHP, Bootstrap, responsive techniques, HTML 5, CSS 3",
-    "img":"artdomino.jpg",
-    "link":"https://www.art-domino.com/index.php/shop"
+    "id": "carpendale", 
+    "title": "Howard Carpendale Shop", 
+    "client": "Ballyhoo Werbeagentur GmbH, Hamburg, Germany",
+    "technologies":"Magento, PHP (OOP), MySQL, AJAX , JavaScript, Zend framework, GIT, XHTML and CSS.",
+    "responsibilities":"Magento installation and configuration. Back-end development. Payment gateway integration. Magento customization services. Magento API.",
+    "img":"carpendale.jpg",
+    "link":"http://www.howard-carpendale-shop.de/" 
   },
   { 
-    "id": "4", 
-    "title": "ART-DOMINO", 
-    "client": "ART-DOMINO® GALERIE, Berlin, Germany",
-    "technologies":"Laravel PHP, framework, MVC, MySQL, jQuery, AJAX , JSON, Bootstrap, LESS, HTML, CSS, XML, NetBeans, GIT.",
-    "responsibilities":"Project consultation and conception. Converting from flash to HTML5. Programming using jQuery, AJAX, JSON, PHP, Bootstrap, responsive techniques, HTML 5, CSS 3",
-    "img":"artdomino.jpg",
-    "link":"https://www.art-domino.com/index.php/shop"
+    "id": "marketplace", 
+    "title": "The Global Marketplace", 
+    "client": "Ballyhoo Werbeagentur GmbH, Hamburg, Germany",
+    "technologies":"PHP (OOP), CodeIgniter Framework, MySQL, AJAX (jQuery), JSON, XHTML, CSS, XML, NetBeans, GIT",
+    "responsibilities":"Project consultation and conception. Application logic. Database modeling. PHP, MySQL and jQuery programming. Template integration.",
+    "img":"marketplace.jpg",
+    "link":""
   },
   { 
-    "id": "5", 
-    "title": "ART-DOMINO", 
-    "client": "ART-DOMINO® GALERIE, Berlin, Germany",
-    "technologies":"Laravel PHP, framework, MVC, MySQL, jQuery, AJAX , JSON, Bootstrap, LESS, HTML, CSS, XML, NetBeans, GIT.",
-    "responsibilities":"Project consultation and conception. Converting from flash to HTML5. Programming using jQuery, AJAX, JSON, PHP, Bootstrap, responsive techniques, HTML 5, CSS 3",
-    "img":"artdomino.jpg",
-    "link":"https://www.art-domino.com/index.php/shop"
+    "id": "velux", 
+    "title": "VELUX - Media Center Architekten", 
+    "client": "Ballyhoo Werbeagentur GmbH, Hamburg, Germany",
+    "technologies":"PHP (OOP), CodeIgniter Framework, MySQL, AJAX (jQuery), JSON, XHTML, CSS, XML, NetBeans, GIT",
+    "responsibilities":"Back-end development - models and controllers",
+    "img":"velux.jpg",
+    "link":""
   },
   { 
-    "id": "6", 
-    "title": "ART-DOMINO ", 
-    "client": "ART-DOMINO® GALERIE, Berlin, Germany",
-    "technologies":"Laravel PHP, framework, MVC, MySQL, jQuery, AJAX , JSON, Bootstrap, LESS, HTML, CSS, XML, NetBeans, GIT.",
-    "responsibilities":"Project consultation and conception. Converting from flash to HTML5. Programming using jQuery, AJAX, JSON, PHP, Bootstrap, responsive techniques, HTML 5, CSS 3",
-    "img":"artdomino.jpg",
-    "link":"https://www.art-domino.com/index.php/shop"
+    "id": "althaus", 
+    "title": "Althaus Shop", 
+    "client": "Ballyhoo Werbeagentur GmbH, Hamburg, Germany",
+    "technologies":"PHP (OOP), MySQL, AJAX (jQuery), Zend framework, XHTML and CSS",
+    "responsibilities":"Magento customization services and custom modules development.",
+    "img":"althaus.jpg",
+    "link":"http://www.althaustea.de/"
   }
 ]

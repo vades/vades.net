@@ -12,15 +12,15 @@
         describing the information requested.</p>
     </div>
     <div class="col-12">
-      <form id="contact_form" action="https://jsonplaceholder.typicode.com/todos">
+      <form id="contact_form" action="https://api.vades.net/api/v1/public/contact-form">
         <fieldset>
           <div class="input-wrap">
-            <label for="contact_email">Enter your email address</label>
-            <input type="email" id="contact_email" name="contact_email" data-parsley-trigger="change" required="" />
+            <label for="from">Enter your email address</label>
+            <input type="email" id="from" name="from" data-parsley-trigger="change" required="" />
           </div>
           <div class="input-wrap">
-            <label for="contact_message">Your message</label>
-            <textarea id="contact_message" name="contact_message" cols="30" rows="10" data-parsley-trigger="change" required=""></textarea>
+            <label for="message">Your message</label>
+            <textarea id="message" name="message" cols="30" rows="10" data-parsley-trigger="change" required=""></textarea>
           </div>
         </fieldset>
         <fieldset>
@@ -32,9 +32,9 @@
 </section>
 
 <!-- <section class="notify-overlay">
-  <section id="notify" class="notify">
+  <section id="notify" class="notify is-danger">
       <figure>
-        <img class="papa" src="./img/is-success.svg" width="64" height="64">
+        <img src="./img/is-danger.svg" width="64" height="64">
       </figure>
    
     <article> 
