@@ -2,12 +2,13 @@
 /* Body
 -------------------------------------------------- */
 body {
-  @include displayFlex();
+  /*  @include displayFlex();
   @include flexDirection(column);
-  min-height: 100vh;
+  min-height: 100vh; */
   background: lighten($primary-color-10, 3) url('../img/bcg-body.jpg');
-   /* body overflow is hidden to hide main scrollbar when modal window is open */
-   &.modal-open {
+
+  /* body overflow is hidden to hide main scrollbar when modal window is open */
+  &.modal-open {
     overflow: hidden;
   }
 }
@@ -34,10 +35,12 @@ body {
 
 .section-header {
   text-align: center;
+  margin-bottom: $spacing-double;
 
   .text-icon {
     svg {
       width: 32px;
+      max-height: 32px;
       color: $primary-color-40;
 
     }
@@ -64,8 +67,9 @@ body {
 .notify {
   background-color: $primary-color-10;
   color: $primary-color-80;
+
   &.is-success {
-  
+
     border-color: $primary-color-20;
   }
 
@@ -79,9 +83,9 @@ body {
 /* home_jumbotron
 -------------------------------------------------- */
 #home_jumbotron {
- 
+
   @include mqMin($break-m) {
-   
+
     @include displayFlex();
     @include justifyContent(space-between);
     @include alignItems(center);
@@ -90,12 +94,18 @@ body {
   @include mqMin($break-l) {
     width: $container-max-w;
     margin: 0 auto;
+    & article{
+      width: 50%;
+    }
   }
 
+
   .jumbotron-text {
+  
     font-size: 130%;
-   margin: $spacing-double 0;
-   text-align: center;
+    margin: $spacing-double 0;
+    text-align: center;
+
     @include mqMin($break-m) {
       font-size: 160%;
       text-align: left;
@@ -103,10 +113,11 @@ body {
   }
 
   .jumbotron-img {
-   
+
     svg {
       height: 20rem;
       width: 100%;
+
       @include mqMin($break-m) {
         height: 40rem;
       }
@@ -119,13 +130,14 @@ body {
 -------------------------------------------------- */
 #home_services {
   border-top: solid 1px $primary-color-20;
-  .cards{
+
+  .cards {
     @include mqMin($break-l) {
       width: $container-max-w;
       margin: 0 auto;
     }
   }
- 
+
   .card {
     text-align: center;
     margin-left: auto;
@@ -148,19 +160,10 @@ body {
 /* Reference
 -------------------------------------------------- */
 #home_reference {
-  border-top: solid 2px darken(#f9d6a4, 3%);
-  border-bottom: solid 2px darken(#f9d6a4, 10%);
-  background: $secondary-color-30;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9d6a4+0,faca84+100 */
-  background: #f9d6a4;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #f9d6a4 0%, #faca84 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #f9d6a4 0%, #faca84 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #f9d6a4 0%, #faca84 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9d6a4', endColorstr='#faca84', GradientType=0);
+  border-top: solid 2px darken($primary-color-10, 3%);
+  border-bottom: solid 2px darken($primary-color-10, 7%);
+  background: $primary-color-10;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fabcb7+0,fde9e7+100 */
 
   /* IE6-9 */
   .text-icon {
@@ -171,7 +174,7 @@ body {
     }
 
     figcaption {
-      color: $secondary-color-60;
+      color: $primary-color-60;
     }
   }
 
@@ -180,17 +183,20 @@ body {
       width: $container-max-w;
       margin: 0 auto;
     }
-    > figure {
+
+    >figure {
       width: 33.3333%;
       cursor: pointer;
+
       @include mqMin($break-l) {
         width: 16.6666%;
       }
 
-      > img {
+      >img {
         object-fit: cover;
         height: 120px;
-        border: solid 5px lighten($secondary-color-30, 10%);
+        border: solid 1px darken($primary-color-10, 7%);
+
         //border-radius: 50%;
         @include mqMin($break-m) {
           height: auto;
@@ -198,14 +204,17 @@ body {
       }
 
     }
-    .modal{
-      article{
+
+    .modal {
+      article {
         text-align: center;
+
         @include mqMin($break-m) {
           text-align: left;
         }
-        figure{
-          img{
+
+        figure {
+          img {
             max-height: 500px;
           }
         }
@@ -223,43 +232,56 @@ body {
 #home_about {
   //background: $primary-color-10;
 
-  border-bottom: solid 10px darken($primary-color-10, 3%);
-  .grid{
-    @include mqMin($break-l) {
-      width: $container-max-w;
-      margin: 0 auto;
-    }
-  }
-  article{
-    h3{
-      font-size: 120%
-    }
+  //border-bottom: solid 10px darken($primary-color-10, 3%);
+
+  section {
     @include mqMin($break-m) {
-      padding: 0 $spacing-double;
-      margin: $spacing-double 0;
+
+      @include displayFlex();
+      /*  @include justifyContent(space-between);
+      @include alignItems(center); */
+      // padding: 0 $spacing-double;
+      // margin: $spacing-double 0;
       background-color: $bcg-color;
       @include borderRadius(10px);
       padding: $spacing-quad;
       -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
       -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
       box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
-     
-      
-     }
+    }
+
+    @include mqMin($break-l) {
+      width: $container-max-w;
+      margin: 0 auto;
+    }
   }
-  .about-me{
+
+  article {
+    width: 50%;
+
+    h3 {
+      font-size: 120%
+    }
+
+    @include mqMin($break-m) {
+
+      padding: 0 $spacing-double;
+      margin: $spacing-double 0;
+
+    }
+  }
+
+  .about-me {
     font-size: 120%;
     margin-bottom: $spacing-double;
+
     @include mqMin($break-m) {
       margin-bottom: 0;
     }
   }
 
-  .about-skils{
-   
-   
-  }
- 
+  .about-skils {}
+
 
 }
 
@@ -267,7 +289,7 @@ body {
 -------------------------------------------------- */
 #home_contact {
   @include mqMin($break-l) {
-    width:50%;
+    width: 50%;
     margin: 0 auto;
   }
 }
@@ -288,7 +310,8 @@ body {
   font-size: 120%;
   text-transform: uppercase;
   padding: $spacing $spacing-double;
+
   @include mqMin($break-l) {
-    width:auto;
+    width: auto;
   }
 }
