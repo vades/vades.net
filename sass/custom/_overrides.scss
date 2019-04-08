@@ -206,11 +206,16 @@ body {
     }
 
     .modal {
+     
       article {
         text-align: center;
 
         @include mqMin($break-m) {
           text-align: left;
+          @include displayFlex();
+          > *{
+            width: 50%;
+          }
         }
 
         figure {
