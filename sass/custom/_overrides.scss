@@ -30,6 +30,16 @@ body {
 #main {
   >section {
     padding: $spacing;
+
+    ul {
+      padding: 0;
+      //list-style-type: none;
+      -webkit-padding-start: 0;
+
+      li {
+        margin-left: $spacing-double;
+      }
+    }
   }
 }
 
@@ -94,14 +104,15 @@ body {
   @include mqMin($break-l) {
     width: $container-max-w;
     margin: 0 auto;
-    & article{
+
+    & article {
       width: 50%;
     }
   }
 
 
   .jumbotron-text {
-  
+
     font-size: 130%;
     margin: $spacing-double 0;
     text-align: center;
@@ -184,36 +195,46 @@ body {
       margin: 0 auto;
     }
 
-    >figure {
+    >article {
       width: 33.3333%;
       cursor: pointer;
-
+      padding: $spacing;
       @include mqMin($break-l) {
         width: 16.6666%;
       }
 
-      >img {
-        object-fit: cover;
-        height: 120px;
-        border: solid 1px darken($primary-color-10, 7%);
+      >figure {
+       // 
+        -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+        -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+        box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+        //padding: $spacing-half;
+      
+        >img {
+          //@include borderRadius(10px);
+          object-fit: cover;
+          height: 120px;
+          border: solid 6px $bcg-color;
 
-        //border-radius: 50%;
-        @include mqMin($break-m) {
-          height: auto;
+          //border-radius: 50%;
+          @include mqMin($break-m) {
+            height: auto;
+          }
         }
-      }
 
+      }
     }
 
     .modal {
-     
+
       article {
         text-align: center;
 
         @include mqMin($break-m) {
           text-align: left;
           @include displayFlex();
-          > *{
+
+          >* {
             width: 50%;
           }
         }
@@ -243,6 +264,7 @@ body {
     @include mqMin($break-m) {
 
       @include displayFlex();
+      @include alignItems(center);
       /*  @include justifyContent(space-between);
       @include alignItems(center); */
       // padding: 0 $spacing-double;
@@ -262,22 +284,23 @@ body {
   }
 
   article {
-    width: 50%;
+
+
+    @include mqMin($break-m) {
+      width: 50%;
+      padding: 0 $spacing-double;
+      margin: $spacing-double 0;
+
+    }
 
     h3 {
       font-size: 120%
     }
 
-    @include mqMin($break-m) {
-
-      padding: 0 $spacing-double;
-      margin: $spacing-double 0;
-
-    }
   }
 
   .about-me {
-    font-size: 120%;
+    font-size: 110%;
     margin-bottom: $spacing-double;
 
     @include mqMin($break-m) {
@@ -294,7 +317,7 @@ body {
 -------------------------------------------------- */
 #home_contact {
   @include mqMin($break-l) {
-    width: 50%;
+    width: $container-max-w;
     margin: 0 auto;
   }
 }
@@ -308,6 +331,12 @@ body {
   .input-wrap {
     margin-bottom: $spacing-double;
   }
+}
+
+#from{
+  @include mqMin($break-m) {
+  width: 30%;
+}
 }
 
 #button_submit {

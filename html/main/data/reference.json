@@ -1,5 +1,68 @@
 [
   { 
+    "id": "z-wave-rcc", 
+    "title": "RCC - Monitoring system for Smart Home gateways", 
+    "client": "Z-Wave Europe GmbH,  Hohenstein-Ernstthal, Germany",
+    "technologies":"PHP Laravel Framework, MySql, Angular, REST API, JSON, Google Firebase",
+    "responsibilities":"Design of application logic, database, interfaces. App and API interface development.",
+    "img":"z-wave-rcc.png",
+    "link":""
+  },
+{ 
+    "id": "z-wave-smarthome", 
+    "title": "SmartHome UI - App for controlling Smart Home devices", 
+    "client": "Z-Wave Europe GmbH,  Hohenstein-Ernstthal, Germany",
+    "technologies":"Z-Wave protocol, Raspberry Pi, Angular, HTML, CSS, Bootstrap, REST API, JSON",
+    "responsibilities":"Design of application logic. App and API interface development.",
+    "img":"z-wave-smarthome.png",
+    "link":""
+  },
+  { 
+    "id": "z-wave-expertui", 
+    "title": "ExpertUI - App for controlling Smart Home devices", 
+    "client": "Z-Wave Europe GmbH,  Hohenstein-Ernstthal, Germany",
+    "technologies":"Z-Wave protocol, Raspberry Pi, Angular, HTML, CSS, Bootstrap, REST API, JSON",
+    "responsibilities":"Design of application logic. App and API interface development.",
+    "img":"z-wave-expertui.png",
+    "link":""
+  },
+{ 
+    "id": "z-wave-de", 
+    "title": "Z-Wave Smart Home Community and Service Portal", 
+    "client": "Z-Wave Europe GmbH,  Hohenstein-Ernstthal, Germany",
+    "technologies":"WordPress, MySql, CSS, HTML and jQuery",
+    "responsibilities":"Developing of wordpress theme and plugins.",
+    "img":"z-wave-de.png",
+    "link":"https://zwave.de/"
+  },
+{ 
+    "id": "z-wave-selection", 
+    "title": "Z-Wave Selection", 
+    "client": "Z-Wave Europe GmbH,  Hohenstein-Ernstthal, Germany",
+    "technologies":"PHP, MySQL, AJAX, jQuery,XHTML and CSS",
+    "responsibilities":"Designing and developing for various device resolutions.",
+    "img":"z-wave-selection.png",
+    "link":""
+  },
+{ 
+    "id": "z-wave-cert-product", 
+    "title": "Off-line Z-Wave Certificated Products", 
+    "client": "Z-Wave Europe GmbH,  Hohenstein-Ernstthal, Germany",
+    "technologies":"Angular, HTML, CSS, Bootstrap, JSON",
+    "responsibilities":"Designing and developing for various device resolutions.",
+    "img":"z-wave-cert-product.png",
+    "link":""
+  },
+{ 
+    "id": "z-wave-catalog", 
+    "title": "Off-line Z-Wave Catalog", 
+    "client": "Z-Wave Europe GmbH,  Hohenstein-Ernstthal, Germany",
+    "technologies":"Angular, HTML, CSS, Bootstrap, JSON",
+    "responsibilities":"Designing and developing for various device resolutions.",
+    "img":"z-wave-catalog.png",
+    "link":""
+  },
+  { 
     "id": "artdomino", 
     "title": "ART-DOMINO", 
     "client": "ART-DOMINO® GALERIE, Berlin, Germany",
@@ -52,5 +115,50 @@
     "responsibilities":"Magento customization services and custom modules development.",
     "img":"althaus.jpg",
     "link":"http://www.althaustea.de/"
+  },
+  { 
+    "id": "sowia", 
+    "title": "E-commerce solutions (Magento)", 
+    "client": "MH direkt GmbH, Bregenz, Austria",
+    "technologies":"PHP (OOP), MySQL, AJAX (jQuery), Zend framework, XHTML and CSS",
+    "responsibilities":"ERP Interface Development. Magento installation, configuration and localization. Magento custom modules development and integration. Payment gateway and shipping integration. Magento Multi-Stores templates development. Template localization.",
+    "img":"sowia.jpg",
+    "link":"http://www.sowaswillichauch.de/"
+  },
+  { 
+    "id": "cadeauxfolies", 
+    "title": "E-commerce solutions (Magento)", 
+    "client": "MH direkt GmbH, Bregenz, Austria",
+    "technologies":"PHP (OOP), MySQL, AJAX (jQuery), Zend framework, XHTML and CSS",
+    "responsibilities":"ERP Interface Development. Magento installation, configuration and localization. Magento custom modules development and integration. Payment gateway and shipping integration. Magento Multi-Stores templates development. Template localization.",
+    "img":"cadeauxfolies.jpg",
+    "link":"http://www.cadeauxfolies.fr/"
+  },
+  { 
+    "id": "geschenkeprinz", 
+    "title": "E-commerce solutions (Magento)", 
+    "client": "MH direkt GmbH, Bregenz, Austria",
+    "technologies":"PHP (OOP), MySQL, AJAX (jQuery), Zend framework, XHTML and CSS",
+    "responsibilities":"ERP Interface Development. Magento installation, configuration and localization. Magento custom modules development and integration. Payment gateway and shipping integration. Magento Multi-Stores templates development. Template localization.",
+    "img":"geschenkeprinz.jpg",
+    "link":"http://www.geschenkeprinz.de/"
+  },
+  { 
+    "id": "weltderwunder", 
+    "title": "E-commerce solutions (Magento)", 
+    "client": "MH direkt GmbH, Bregenz, Austria",
+    "technologies":"PHP (OOP), MySQL, AJAX (jQuery), Zend framework, XHTML and CSS",
+    "responsibilities":"ERP Interface Development. Magento installation, configuration and localization. Magento custom modules development and integration. Payment gateway and shipping integration. Magento Multi-Stores templates development. Template localization.",
+    "img":"weltderwunder.jpg",
+    "link":""
+  },
+  { 
+    "id": "aflare", 
+    "title": "Aflare Systems Inc.", 
+    "client": "Aflare Systems Inc., Brampton, Canada",
+    "technologies":"WordPress, PHP, MySQL, AJAX (jQuery), XHTML, CSS",
+    "responsibilities":"Information architecture. WordPress theme and module development. PHP, MySQL and AJAX programming. Web design. Logo, brochure and display banner design.",
+    "img":"aflare.jpg",
+    "link":"http://www.aflaresystems.com/"
   }
 ]

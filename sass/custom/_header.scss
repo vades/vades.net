@@ -103,12 +103,15 @@
     width: 100%;
 
     @include displayFlex();
-    @include justifyContent(space-between);
+  
     @include alignItems(center);
+    @include mqMin($break-s) {
+      @include justifyContent(space-between);
+    }
 
     li {
       font-size: 110%;
-      padding: 0;
+      padding: 0 $spacing;
       text-transform: uppercase;
     }
   }

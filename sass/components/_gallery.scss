@@ -4,17 +4,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  & >article {
  & >figure {
     text-align: center;
     img {
       transition: all 1s;
    
        &:hover {
-         transform: scale(1.1);
+         transform: scale(1.2);
        }
      }
   }
-
+}
   
 }
