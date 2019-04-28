@@ -50,9 +50,9 @@
 #header {
   z-index: $zindex-header;
   top: 3px !important; //#headerStripe height
-  height: $header-h;
+  height: $header-h ;
   background: #fff;//lighten($primary-color-10, 3);
-  padding: $spacing;
+  padding-top: 3px;
   -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
   -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
   box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
@@ -64,10 +64,6 @@
   }
 
   >section {
-
-    @include displayFlex();
-    @include justifyContent(space-between);
-    @include alignItems(center);
     height: 100%;
     @include mqMin($break-l) {
       margin: 0 auto;
@@ -78,25 +74,15 @@
 
 }
 
-#headerBrand {
-  @include displayFlex();
-  @include justifyContent(space-between);
-  @include alignItems(center);
-}
-
 #headerLogo {
   svg {
     height: 3rem;
+    max-width: 4rem;
   }
 
 }
 
 #headerPrimary {
-  width:60%;
-
-  @include mqMin($break-m) {
-    width: 40%;
-  }
 
   ul {
     display: block;
@@ -105,14 +91,22 @@
     @include displayFlex();
   
     @include alignItems(center);
-    @include mqMin($break-s) {
+    @include justifyContent(space-between);
+   /*  @include mqMin($break-s) {
       @include justifyContent(space-between);
-    }
+    } */
 
     li {
+
+      //width: 25%;
       font-size: 110%;
       padding: 0 $spacing;
+      padding: 0 10px;
+max-width: calc(100% - 1rem);
       text-transform: uppercase;
+      @include mqMin($break-s) {
+       // width: 20%;
+      } 
     }
   }
 }
