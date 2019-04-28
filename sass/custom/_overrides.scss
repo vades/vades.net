@@ -194,38 +194,47 @@ body {
       width: $container-max-w;
       margin: 0 auto;
     }
-
-    >article {
-      width: 33.3333%;
-      cursor: pointer;
-      padding: $spacing;
-      @include mqMin($break-l) {
-        width: 16.6666%;
-      }
+      
 
       >figure {
-       // 
-        -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
-        -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
-        box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
-        //padding: $spacing-half;
+        display: inline;
+        width: 33.3333%;
+        cursor: pointer;
+        padding: $spacing-half;
+        @include mqMin($break-m) {
+          padding: $spacing;
+        }
+        @include mqMin($break-l) {
+          width: 16.6666%;
+        }
       
         >img {
-          //@include borderRadius(10px);
+         //filter: grayscale(100%) sepia(50%) hue-rotate(45deg);
+         filter: grayscale(100%) sepia(20%) hue-rotate(45deg);
+         &:hover {
+           filter: none;
+         }
           object-fit: cover;
-          height: 120px;
+          //height: 120px;
           border: solid 6px $bcg-color;
+         
 
           //border-radius: 50%;
           @include mqMin($break-m) {
             height: auto;
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+            -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+            box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
           }
+          
         }
 
       }
-    }
 
     .modal {
+      @include mqMin($break-l) {
+        margin: 6rem;
+      }
 
       article {
         text-align: center;
